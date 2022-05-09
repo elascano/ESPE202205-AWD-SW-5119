@@ -1,0 +1,47 @@
+.presentacion{
+ 
+    width: 100% ;
+    height: 550px ;
+    background-image: url('/src/Imagenes/Oficina.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.presentacion::before{
+    content:'';
+	position: absolute;
+        top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+}
+
+.logoalb{
+    background-image: url('/src/Imagenes/logo.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    top: -40px;
+    left: 27%;
+    
+}
+
+.BWelcome{
+    position: relative;
+    top: -100px;
+    
+}
+
+.stackalb{
+    position: relative;
+    top: -100px;
+}
+
+.arrdow{
+    position: relative;
+    top:  -50px;
+    left: 623px;
+}

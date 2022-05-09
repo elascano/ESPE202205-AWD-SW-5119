@@ -1,0 +1,17 @@
+body{
+    display: grid;
+    height: 900px;
+    width: 100%;
+    grid-template-rows: 5% 70% 25%;
+    grid-template-areas: 
+    "menu"
+    "contenido"
+    "footer";
+ }
+ 
+ .contenido{
+    display: grid;
+    grid-area: contenido;
+    background: url(../Imagenes/fondo.jpg) no-repeat center center fixed ;
+    background-size: 100%;
+ }
