@@ -1,0 +1,60 @@
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  gap: 1em;
+}
+.contenido:hover{
+  background: url(../Diseños/Fondos/imagen_fondo5.jpg);
+  padding: auto;   /*tamaño del borde al colocar el cursor*/
+  transition: all 0.2s linear;
+  border-radius: 5px;
+  color: rgb(10, 10, 10);
+}
+.contenido {
+ display: grid;
+ background-color: #e6b9f8;
+ border-radius: 5px;
+ border: 1px solid rgb(5, 0, 0);
+ padding: 10px;
+}
+
+.main .contenido a {
+  text-align: center;
+  margin: 20px;
+  font-size: 150% ;
+}
+
+p {
+  text-align: center;
+  margin: 20px;
+  font-size: 100% ;
+}
+
+.contenido div {
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  row-gap: 10px;
+  grid-template:
+    "header"  0px
+    "navbar"  10px
+    "main"    auto
+    "sidebar" 10px
+    "footer"  100px;
+}
+
+@media (min-width: 900px ) {
+  .grid-container {
+    grid-template:
+      "header  header header"  30px
+      "navbar  main   sidebar" auto
+      "footer  footer footer"  100px /
+      250px    auto   250px;
+  }
+}
+
+

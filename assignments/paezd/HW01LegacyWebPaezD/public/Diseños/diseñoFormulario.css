@@ -1,0 +1,106 @@
+.main-F{
+    background: url(../Diseños/Fondos/imagen_fondo5.jpg);
+    width: 100%;
+    max-width: 1341px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,auto);
+    grid-template-areas: "Formulario Mapa"
+                         "Formulario Mapa";
+    text-align: center;
+    margin: auto;
+}
+
+.Formulario{
+    grid-area: Formulario;
+    width: 80%;
+    color:  rgb(21, 14, 61); 
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(9,auto);
+    grid-template-areas: "item-1"
+                         "item-2"
+                         "item-3"
+                         "item-4"
+                         "item-5"
+                         "item-6"
+                         "item-7"
+                         "item-8"
+                         "item-9";
+    text-align: center;
+    align-items: center;
+}
+.formu{
+    grid-area: item-1;
+ 
+}
+.nombre{
+    grid-area: item-2;
+
+}
+.correo{
+    grid-area: item-3;
+
+}
+.numT{
+    grid-area: item-4;
+
+}
+.numCel{
+    grid-area: item-5;
+
+}
+.generoS{
+    grid-area: item-6;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: "cero cero"
+                         "uno dos"
+                         "tres tres";
+}
+.cero{
+    grid-area: cero;
+}
+.uno{
+    grid-area: uno;
+}
+.dos{
+    grid-area: dos;
+}
+.tres{
+    grid-area: tres;
+}
+.fecha{
+    grid-area: item-7;
+}
+.caja-fecha-hora{
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,auto);
+}
+.selec{
+    grid-area: item-8;
+}
+.boton{
+    grid-area: item-9;
+    
+}
+.Mapa{
+    grid-area:Mapa;
+    position:relative;
+    top:12rem;
+}
+.imagenIndex3{
+    width: 580px;
+    height: 250px;
+    display: block;
+    margin: auto;
+  }
