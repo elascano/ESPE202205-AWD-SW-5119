@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.div_principal {
+	
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 3%;
+}
+
+
+.div_principal h3{
+	
+	text-align: center;
+}
+
+.mover {
+	
+	margin-top: 5%;
+}
+
+.imagen {
+	
+	width: 50%;
+	margin-left: 25%;
+}
+
+.div_menu, .div_iframe {
+	
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 3%;
+}
+
+.div_satisfactorio {
+	
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 5%;
+}
+
+.div_satisfactorio h1 {
+	
+	text-align: center;
+}
+
+.mover_boton {
+	
+	width: 15%;
+	margin-left: 42.5%;
+	margin-top: 4%;
+}
