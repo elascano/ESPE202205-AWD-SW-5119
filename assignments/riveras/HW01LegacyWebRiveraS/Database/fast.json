@@ -1,0 +1,72 @@
+[
+    {
+        "id": 0,
+        "clase": "Hamburguesas",
+        "tipo": "Simple",
+        "precio": 5.8,
+        "estado": false
+    },{
+        "id": 1,
+        "clase": "Hamburguesas",
+        "tipo": "Doble",
+        "precio": 5.8,
+        "estado": false
+    },{
+        "id": 2,
+        "clase": "Hamburguesas",
+        "tipo": "Bacon",
+        "precio": 5.8,
+        "estado": false
+    },{
+        "id": 3,
+        "clase": "Hamburguesas",
+        "tipo": "Cheese",
+        "precio": 5.8,
+        "estado": false
+    },{
+        "id": 4,
+        "clase": "Hot Dogs",
+        "tipo": "Clásico",
+        "precio": 3.8,
+        "estado": false
+    },{
+        "id": 5,
+        "clase": "Hot Dogs",
+        "tipo": "Chilli Dog",
+        "precio": 3.8,
+        "estado": false
+    },{
+        "id": 6,
+        "clase": "Hot Dogs",
+        "tipo": "Vegetariano",
+        "precio": 3.8,
+        "estado": false
+    },{
+        "id": 7,
+        "clase": "Papas Fritas",
+        "tipo": "Salchipapas",
+        "precio": 3.8,
+        "estado": false
+    },
+    {
+        "id": 8,
+        "clase": "Papas Fritas",
+        "tipo": "Papi Pollo",
+        "precio": 3.8,
+        "estado": false
+    },
+    {
+        "id": 9,
+        "clase": "Papas Fritas",
+        "tipo": "Papas a la francesa",
+        "precio": 3.8,
+        "estado": false
+    },
+    {
+        "id": 10,
+        "clase": "Papas Fritas",
+        "tipo": "Papas con Queso Cheedar",
+        "precio": 3.8,
+        "estado": false
+    }
+]

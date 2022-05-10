@@ -1,0 +1,163 @@
+[
+    {
+        "id": 0,
+        "clase": "Cervezas",
+        "tipo": "Heineken",
+        "precio": 1.80,
+        "estado": false
+    },
+    {
+        "id": 1,
+        "clase": "Cervezas",
+        "tipo": "Pilsener",
+        "precio": 1.50,
+        "estado": false
+    },
+    {
+        "id": 2,
+        "clase": "Cervezas",
+        "tipo": "Club",
+        "precio": 1.60,
+        "estado": false
+    },
+    {
+        "id": 3,
+        "clase": "Cervezas",
+        "tipo": "Brahama",
+        "precio": 1.40,
+        "estado": false
+    },
+    {
+        "id": 4,
+        "clase": "Cervezas",
+        "tipo": "Corona",
+        "precio": 2.00,
+        "estado": false
+    },
+    {
+        "id": 5,
+        "clase": "Jugos",
+        "tipo": "Limonada",
+        "precio": 1.50,
+        "estado": false
+    },
+    {
+        "id": 6,
+        "clase": "Jugos",
+        "tipo": "Naranja",
+        "precio": 1.70,
+        "estado": false
+    },
+    {
+        "id": 7,
+        "clase": "Jugos",
+        "tipo": "Mora",
+        "precio": 1.80,
+        "estado": false
+    },
+    {
+        "id": 8,
+        "clase": "Jugos",
+        "tipo": "Mango",
+        "precio": 1.70,
+        "estado": false
+    },
+    {
+        "id": 9,
+        "clase": "Jugos",
+        "tipo": "Sandía",
+        "precio": 1.80,
+        "estado": false
+    },
+    {
+        "id": 10,
+        "clase": "Gaseosas",
+        "tipo": "Coca Cola",
+        "precio": 1.80,
+        "estado": false
+    },
+    {
+        "id": 11,
+        "clase": "Gaseosas",
+        "tipo": "Sprite",
+        "precio": 1.80,
+        "estado": false
+    },
+    {
+        "id": 12,
+        "clase": "Gaseosas",
+        "tipo": "Pepsi",
+        "precio": 1.80,
+        "estado": false
+    },
+    {
+        "id": 13,
+        "clase": "Gaseosas",
+        "tipo": "Fanta",
+        "precio": 1.80,
+        "estado": false
+    },
+    {
+        "id": 14,
+        "clase": "Gaseosas",
+        "tipo": "Manzana",
+        "precio": 1.80,
+        "estado": false
+    },
+    {
+        "id": 15,
+        "clase": "Cocteles",
+        "tipo": "Fire Four",
+        "precio": 5.20,
+        "estado": false
+    },
+    {
+        "id": 16,
+        "clase": "Cocteles",
+        "tipo": "Tequila Sunrise",
+        "precio": 5.20,
+        "estado": false
+    },
+    {
+        "id": 17,
+        "clase": "Cocteles",
+        "tipo": "Pecera",
+        "precio": 5.20,
+        "estado": false
+    },
+    {
+        "id": 18,
+        "clase": "Cocteles",
+        "tipo": "Mojito",
+        "precio": 5.20,
+        "estado": false
+    },
+    {
+        "id": 19,
+        "clase": "Cocteles",
+        "tipo": "Saque",
+        "precio": 5.20,
+        "estado": false
+    },
+    {
+        "id": 20,
+        "clase": "Vinos",
+        "tipo": "Rose",
+        "precio": 5.20,
+        "estado": false
+    },
+    {
+        "id": 21,
+        "clase": "Vinos",
+        "tipo": "Tinto",
+        "precio": 5.20,
+        "estado": false
+    },
+    {
+        "id": 22,
+        "clase": "Vinos",
+        "tipo": "Blanco",
+        "precio": 5.20,
+        "estado": false
+    }
+]

@@ -1,0 +1,59 @@
+[
+    {
+        "id": 0,
+        "clase": "Picantes",
+        "tipo": "Buffalo",
+        "precio": 5.6,
+        "estado": false
+    },
+    {
+        "id": 1,
+        "clase": "Picantes",
+        "tipo": "Grill",
+        "precio": 5.6,
+        "estado": false
+    },
+    {
+        "id": 2,
+        "clase": "Frutas",
+        "tipo": "Piña",
+        "precio": 5.6,
+        "estado": false
+    },
+    {
+        "id": 3,
+        "clase": "Frutas",
+        "tipo": "Mora",
+        "precio": 5.6,
+        "estado": false
+    },
+    {
+        "id": 4,
+        "clase": "Frutas",
+        "tipo": "Maracuyá",
+        "precio": 5.6,
+        "estado": false
+    },
+    {
+        "id": 5,
+        "clase": "Dulces",
+        "tipo": "BBQ",
+        "precio": 5.6,
+        "estado": false
+    },
+    {
+        "id": 6,
+        "clase": "Dulces",
+        "tipo": "Honey",
+        "precio": 5.6,
+        "estado": false
+    },
+    {
+        "id": 7,
+        "clase": "Dulcess",
+        "tipo": "Cerveza Negra",
+        "precio": 5.6,
+        "estado": false
+    }
+
+]

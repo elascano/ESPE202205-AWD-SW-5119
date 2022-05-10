@@ -1,0 +1,114 @@
+[
+    {
+        "id": 0,
+        "clase": "Pasteles",
+        "tipo": "Chocolate",
+        "precio": 2.80,
+        "estado": false
+    },
+    {
+        "id": 1,
+        "clase": "Pasteles",
+        "tipo": "Café",
+        "precio": 2.70,
+        "estado": false
+    },
+    {
+        "id": 2,
+        "clase": "Pasteles",
+        "tipo": "Mora",
+        "precio": 2.70,
+        "estado": false
+    },
+    {
+        "id": 3,
+        "clase": "Pasteles",
+        "tipo": "Tres leches",
+        "precio": 2.70,
+        "estado": false
+    },
+    {
+        "id": 4,
+        "clase": "Pasteles",
+        "tipo": "Naranja",
+        "precio": 2.70,
+        "estado": false
+    },
+    {
+        "id": 5,
+        "clase": "Pasteles",
+        "tipo": "Oreo",
+        "precio": 2.70,
+        "estado": false
+    },
+    {
+        "id": 6,
+        "clase": "Pasteles",
+        "tipo": "Frutos Rojos",
+        "precio": 2.70,
+        "estado": false
+    },
+    {
+        "id": 7,
+        "clase": "Helados",
+        "tipo": "Cono Simple",
+        "precio": 1.70,
+        "estado": false
+    },
+    {
+        "id": 8,
+        "clase": "Helados",
+        "tipo": "Cono Doble",
+        "precio": 1.70,
+        "estado": false
+    },
+    {
+        "id": 9,
+        "clase": "Helados",
+        "tipo": "Vasito",
+        "precio": 1.70,
+        "estado": false
+    },
+    {
+        "id": 10,
+        "clase": "Helados",
+        "tipo": "Coco",
+        "precio": 1.70,
+        "estado": false
+    },
+    {
+        "id": 11,
+        "clase": "Helados",
+        "tipo": "Mora",
+        "precio": 1.70,
+        "estado": false
+    },
+    {
+        "id": 12,
+        "clase": "Helados",
+        "tipo": "Hielo",
+        "precio": 1.70,
+        "estado": false
+    },
+    {
+        "id": 13,
+        "clase": "Crepés",
+        "tipo": "Nutella y Fresas",
+        "precio": 3.70,
+        "estado": false
+    },
+    {
+        "id": 14,
+        "clase": "Crepés",
+        "tipo": "Crema Chantilli y Helado",
+        "precio": 3.70,
+        "estado": false
+    },
+    {
+        "id": 15,
+        "clase": "Crepés",
+        "tipo": "Frutas Tropicales",
+        "precio": 3.70,
+        "estado": false
+    }
+]
