@@ -1,0 +1,9 @@
+
+body{
+    width: 1400;
+    height:700px;
+    background-image: url(../php/Resources/img/UCA.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}

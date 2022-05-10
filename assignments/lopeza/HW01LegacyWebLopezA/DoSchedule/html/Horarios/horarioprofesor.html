@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html id="#html" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/adminscheduletable.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="height: 20px;">
+       
+       
+        <button onclick="printPdf()">Imprimir PDF</button>
+        <a href="#html" download="Horario">
+            <button>Imprimir HTML</button>
+            
+        </a>
+        <button onclick="printExcel()">Imprimir Excel</button>
+
+        <a href="../LogIn/docente.php"> <button>regresar</button></a>
+    </div>
+    <div class="timetable">
+        <div class="week-names">
+            <div>Lunes</div>
+            <div>Martes</div>
+            <div>Miercoles</div>
+            <div>Jueves</div>
+            <div>Viernes</div>
+            <div class="weekend">Sabado</div>
+            <div class="weekend">Domingo</div>
+        </div>
+        <div class="time-interval">
+            <div>7:15 - 7:55</div>
+            <div>7:55 - 8:35</div>
+            <div>8:35 - 9:15</div>
+            <div>9:15 - 9:55</div>
+            <div>9:55 - 10:35</div>
+            <div>10:35 - 11:15</div>
+            <div>11:15 - 11:55 RECREO</div>
+            <div>11:55 - 12:35</div>
+            <div>12:35 - 13:15</div>
+        </div>
+        <div id="content" class="content">
+        </div>
+    </div>
+
+    <script>
+        const times = 9
+        const days = 7
+        var currentId = ""
+        var allData = []
+        var courses = []
+        var parallels = []
+        var subjects = []
+        var teachers = []
+        var currentData = {
+            id: "",
+            cursoId: -1,
+            cursoNombre: "",
+            paraleloId: -1,
+            paraleloNombre: "",
+            materiaId: -1,
+            materiaNombre: "",
+            profesorId: -1,
+            profesorNombre: "",
+            colorId: -1,
+            colorNombre: "",
+            celdaId: ""
+        }
+        renderScheduleCells()
+
+
+
+        function renderScheduleCells() {
+            const queryString = window.location.search;
+            console.log(queryString);
+            const urlParams = new URLSearchParams(queryString);
+            const profesorId = urlParams.get('profesorId')
+            $.post("obtenerhorarioprofesor.php",
+                {
+                    profesorId: profesorId
+                },
+                function (data, status) {
+                    allData = JSON.parse(data)
+                    for (let i = 0; i < times; i++) {
+                        for (let j = 0; j < days - 2; j++) {
+                            const id = i.toString() + "" + j.toString()
+                            $(`<div id="${id}" onclick="onScheduleCellClick('${id}')" class="schedule-container"></div>`).appendTo('#content');
+                        }
+                        $(`<div class="weekend"></div>`).appendTo('#content');
+                        $(`<div class="weekend"></div>`).appendTo('#content');
+                    }
+                    allData.forEach(item => {
+                        const currentData = item
+                        const currentId = item.celdaId
+                        switch (Number(currentData.colorId)) {
+                            case 1: {
+                                $(`<div id="${currentData.id}" class="clase-container accent-orange-gradient">Materia: ${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                            case 2: {
+                                $(`<div id="${currentData.id}" class="clase-container accent-green-gradient">Materia: ${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                            case 3: {
+                                $(`<div id="${currentData.id}" class="clase-container accent-cyan-gradient">Materia: ${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                            case 4: {
+                                $(`<div id="${currentData.id}" class="clase-container accent-pink-gradient">Materia: ${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                            case 5: {
+                                $(`<div id="${currentData.id}" class="clase-container accent-purple-gradient">Materia: ${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                            default: {
+                                $(`<div id="${currentData.id}" class="clase-container accent-orange-gradient">Materia: ${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                        }
+                    })
+                });
+        }
+
+        function printPdf() {
+            window.print()
+        }
+
+        function printExcel() {
+            const rows = allData
+
+            let csvContent = "data:text/csv;charset=utf-8,"
+                + rows.map(e => `${e.id},${e.cursoId},${e.cursoNombre},${e.paraleloId},${e.paraleloNombre},${e.materiaId},${e.materiaNombre},${e.profesorId},${e.profesorNombre}`).join("\n");
+
+            var encodedUri = encodeURI(csvContent);
+            window.open(encodedUri);
+        }
+    </script>
+</body>
+
+</html>

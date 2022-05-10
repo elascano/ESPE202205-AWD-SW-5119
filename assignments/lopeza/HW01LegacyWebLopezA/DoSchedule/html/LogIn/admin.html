@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Login Form | CodingLab</title> -->
+    <link rel="stylesheet" href="../../css/LogIn/estiloAdmin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    
+  </head>
+  <body>
+    <div class="body">
+    <div class="container">
+        
+      <div class="wrapper">
+        <div class="tituloA">Administracion</div>
+        <form action="../../php/LogIn/adminSup.php" method="POST" >
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="User Name" name="username" onkeypress="return (alpha(event))"  required>
+          </div>
+          <div class="row">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password"  onkeypress="return (alpha2(event))" name="password" required>
+          </div>
+        
+          <div class="row button">
+            <input type="submit" value="Login">
+          </div>
+        
+        </form>
+        
+      </div>
+      
+    </div>
+    <div class="admin">
+  <a href="../../index.html"> <img src="../../imges/LogIn/volver-flecha.png" alt="" class="volver"></a>
+
+    </div>
+    <script type="text/javascript" src="js/validaciones.js"></script>
+</div>
+  </body>
+</html>

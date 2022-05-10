@@ -1,0 +1,21 @@
+body {
+
+background:  url(../img/UCA.jpg) ;
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-color: #8EB8F1;
+
+}
+
+@media only screen and (max-width: 799px) {
+	body {
+	background-image: url(../img/UCA.jpg) ;
+	}
+}
+
+ .tabla {
+     max-height:500px;
+     overflow:auto;
+}

@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Horarios | JHCodes</title>
+
+    <!-- Bootstrap -->
+    <link href='https://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/profesoresstyles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <section class="md-ui component-data-table">
+        <div class="main-table-wrapper">
+            <table class="main-table-content">
+                <thead class="data-table-header">
+                    <tr class="data-table-row">
+                        <td class="table-datacell datatype-string">Curso</td>
+                        <td class="table-datacell datatype-string">Paralelo</td>
+                        <td class="table-datacell datatype-string">Acciones</td>
+                    </tr>
+                </thead>
+                <tbody id="data-table-content" class="data-table-content">
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script>
+        getBasicData()
+        function getBasicData() {
+            $.get("obtenercursosparalelos.php",
+                function (data, status) {
+                    console.log("Data: " + data + "\nStatus: " + status);
+                    teachers = JSON.parse(data)
+                    teachers.forEach(item => {
+                        $(`
+                            <tr class="data-table-row" onclick="openSchedule(${item.cursoId}, ${item.paraleloId})">
+                                <td class="table-datacell datatype-string">${item.cursoNombre}</td>
+                                <td class="table-datacell datatype-string">${item.paraleloNombre}</td>
+                                <td class="table-datacell datatype-string">Ver Horario</td>
+                            </tr>
+                        `).appendTo('#data-table-content');
+                    })
+                }
+            )
+        }
+
+        function openSchedule(cursoId, paraleloId) {
+            window.location = `../Horarios/horariocurso.html?cursoId=${cursoId}&paraleloId=${paraleloId}`
+        }
+    </script>
+</body>
+
+</html>

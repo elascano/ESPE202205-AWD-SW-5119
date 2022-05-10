@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+span .icono{
+    display: none;    
+}
+span .icono_error{
+    display: none;    
+}
+
+span .icono-bien{
+    display: block;
+    color: green;
+}
+
+span .icono-mal{
+    display: block;
+    color: red;
+}
+.mensaje1{
+    display: block;    
+}
+.mensaje-error{
+    display: block;
+    color: orange;    
+    margin-bottom: -13px;
+}

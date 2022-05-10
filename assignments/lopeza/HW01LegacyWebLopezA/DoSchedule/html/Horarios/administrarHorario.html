@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/adminscheduletable.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="timetable">
+        <div class="week-names">
+            <div>Lunes</div>
+            <div>Martes</div>
+            <div>Miercoles</div>
+            <div>Jueves</div>
+            <div>Viernes</div>
+            <div class="weekend">Sabado</div>
+            <div class="weekend">Domingo</div>
+        </div>
+        <div class="time-interval">
+            <div>7:15 - 7:55</div>
+            <div>7:55 - 8:35</div>
+            <div>8:35 - 9:15</div>
+            <div>9:15 - 9:55</div>
+            <div>9:55 - 10:35</div>
+            <div>10:35 - 11:15</div>
+            <div>11:15 - 11:55 RECREO</div>
+            <div>11:55 - 12:35</div>
+            <div>12:35 - 13:15</div>
+        </div>
+        <div id="content" class="content">
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-overlay modal-toggle">
+            <div class="modal-wrapper modal-transition">
+                <div class="modal-header">
+                    <button class="modal-close modal-toggle"><svg class="icon-close icon" viewBox="0 0 32 32">
+                            <use xlink:href="#icon-close"></use>
+                        </svg></button>
+                    <h2 class="modal-heading">Crear una clase nueva</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-content">
+                        <p class="datos" id="datos-curso-create">Curso:</p>
+                        <p class="datos" id="datos-paralelo-create">Paralelo:</p>
+                        <select name="materia" id="materia">
+                        </select>
+                        <select name="profesor" id="profesor">
+                        </select>
+                        <select name="color" id="color">
+                            <option value="1">Naranja</option>
+                            <option value="2">Verde</option>
+                            <option value="3">Cyan</option>
+                            <option value="4">Rosado</option>
+                            <option value="5">Purpura</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="modal-toggle" onclick="closeModal()">Cerrar</button>
+                        <button class="modal-toggle" onclick="addClass()">Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal1" class="modal">
+        <div class="modal-overlay modal-toggle">
+            <div class="modal-wrapper modal-transition">
+                <div class="modal-header">
+                    <button class="modal-close modal-toggle"><svg class="icon-close icon" viewBox="0 0 32 32">
+                            <use xlink:href="#icon-close"></use>
+                        </svg></button>
+                    <h2 class="modal-heading">Datos de la Clase</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-content">
+                        <p class="datos" id="datos-curso">Curso:</p>
+                        <p class="datos" id="datos-paralelo">Paralelo:</p>
+                        <p class="datos" id="datos-materia">Materia:</p>
+                        <p class="datos" id="datos-profesor">Profesor:</p>
+                    </div>
+                    <div>
+                        <button class="modal-toggle" onclick="closeModal1()">Cerrar</button>
+                        <button class="modal-toggle" onclick="deleteClass()">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const times = 9
+        const days = 7
+        var currentId = ""
+        var allData = []
+        var courses = []
+        var parallels = []
+        var subjects = []
+        var teachers = []
+        var cursoId = -1
+        var cursoNombre = ""
+        var paraleloId = -1
+        var paraleloNombre = ""
+        var currentData = {
+            id: "",
+            cursoId: -1,
+            cursoNombre: "",
+            paraleloId: -1,
+            paraleloNombre: "",
+            materiaId: -1,
+            materiaNombre: "",
+            profesorId: -1,
+            profesorNombre: "",
+            colorId: -1,
+            colorNombre: "",
+            celdaId: ""
+        }
+
+        getBasicData()
+        renderScheduleCells()
+
+        function getBasicData() {
+            const queryString = window.location.search;
+            console.log("QQQQQQQ", queryString);
+            const urlParams = new URLSearchParams(queryString);
+            cursoId = Number(urlParams.get('cursoId'))
+            cursoNombre = urlParams.get('cursoNombre')
+            paraleloId = Number(urlParams.get('paraleloId'))
+            paraleloNombre = urlParams.get('paraleloNombre')
+            $(`#datos-curso-create`).text('Curso: ' + cursoNombre);
+            $(`#datos-paralelo-create`).text('Paralelo: ' + paraleloNombre);
+            $.get("obtenermaterias.php",
+                function (data, status) {
+                    console.log("Data: " + data + "\nStatus: " + status);
+                    subjects = JSON.parse(data)
+                    subjects.forEach(item => {
+                        $(`<option value="${item.id}">${item.nombre}</option>`).appendTo('#materia');
+                    })
+                }
+            )
+            $.get("obtenerprofesores.php",
+                function (data, status) {
+                    console.log("Data: " + data + "\nStatus: " + status);
+                    teachers = JSON.parse(data)
+                    teachers.forEach(item => {
+                        $(`<option value="${item.id}">${item.nombre}</option>`).appendTo('#profesor');
+                    })
+                }
+            )
+        }
+
+
+
+        function renderScheduleCells() {
+            $.post("obtenerhorariocursoparalelo.php",
+                {
+                    cursoId,
+                    paraleloId
+                },
+                function (data, status) {
+                    allData = JSON.parse(data)
+                    for (let i = 0; i < times; i++) {
+                        for (let j = 0; j < days - 2; j++) {
+                            const id = i.toString() + "" + j.toString()
+                            $(`<div id="${id}" onclick="onScheduleCellClick('${id}')" class="schedule-container"></div>`).appendTo('#content');
+                        }
+                        $(`<div class="weekend"></div>`).appendTo('#content');
+                        $(`<div class="weekend"></div>`).appendTo('#content');
+                    }
+                    allData.forEach(item => {
+                        const currentData = item
+                        const currentId = item.celdaId
+                        switch (Number(currentData.colorId)) {
+                            case 1: {
+                                $(`<div id="${currentData.id}" onclick="onScheduleClick('${currentData.id}')" class="clase-container accent-orange-gradient">Materia: ${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                            case 2: {
+                                $(`<div id="${currentData.id}" onclick="onScheduleClick('${currentData.id}')" class="clase-container accent-green-gradient">Materia: ${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                            case 3: {
+                                $(`<div id="${currentData.id}" onclick="onScheduleClick('${currentData.id}')" class="clase-container accent-cyan-gradient">Materia: ${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                            case 4: {
+                                $(`<div id="${currentData.id}" onclick="onScheduleClick('${currentData.id}')" class="clase-container accent-pink-gradient">Materia: ${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                            case 5: {
+                                $(`<div id="${currentData.id}" onclick="onScheduleClick('${currentData.id}')" class="clase-container accent-purple-gradient">Materia: ${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                            default: {
+                                $(`<div id="${currentData.id}" onclick="onScheduleClick('${currentData.id}')" class="clase-container accent-orange-gradient">Materia: ${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                        }
+                    })
+                });
+        }
+
+        function onScheduleCellClick(id) {
+            currentId = id
+            $('#modal').toggleClass('is-visible');
+        }
+
+        function closeModal() {
+            $('#modal').toggleClass('is-visible');
+            currentId = ""
+        }
+
+        function closeModal1() {
+            $('#modal1').toggleClass('is-visible');
+            emptyCurrentData()
+            currentId = ""
+        }
+
+        function emptyCurrentData() {
+            currentData = {
+                id: "",
+                cursoId: -1,
+                cursoNombre: "",
+                paraleloId: -1,
+                paraleloNombre: "",
+                materiaId: -1,
+                materiaNombre: "",
+                profesorId: -1,
+                profesorNombre: "",
+                colorId: -1,
+                colorNombre: "",
+                celdaId: ""
+            }
+        }
+
+        function addClass() {
+            currentData = {
+                id: (Math.floor(Math.random() * 99999 - 10000) + 10000).toString(),
+                cursoId: cursoId,
+                cursoNombre: cursoNombre,
+                paraleloId: paraleloId,
+                paraleloNombre: paraleloNombre,
+                materiaId: Number($(`#materia`).find(':selected').val()),
+                materiaNombre: $(`#materia`).find(':selected').text(),
+                profesorId: Number($(`#profesor`).find(':selected').val()),
+                profesorNombre: $(`#profesor`).find(':selected').text(),
+                colorId: Number($(`#color`).find(':selected').val()),
+                colorNombre: $(`#color`).find(':selected').text(),
+                celdaId: currentId
+            }
+            $.post("agregarclase.php",
+                currentData,
+                function (data, status) {
+                    alert("Data: " + data + "\nStatus: " + status);
+                    if (!data.toString().includes("Error")) {
+                        switch (currentData.colorId) {
+                            case 1: {
+                                $(`<div id="${currentData.id}" onclick="onScheduleClick('${currentData.id}')" class="clase-container accent-orange-gradient">${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                            case 2: {
+                                $(`<div id="${currentData.id}" onclick="onScheduleClick('${currentData.id}')" class="clase-container accent-green-gradient">${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                            case 3: {
+                                $(`<div id="${currentData.id}" onclick="onScheduleClick('${currentData.id}')" class="clase-container accent-cyan-gradient">${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                            case 4: {
+                                $(`<div id="${currentData.id}" onclick="onScheduleClick('${currentData.id}')" class="clase-container accent-pink-gradient">${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                            case 5: {
+                                $(`<div id="${currentData.id}" onclick="onScheduleClick('${currentData.id}')" class="clase-container accent-purple-gradient">${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                            default: {
+                                $(`<div id="${currentData.id}" onclick="onScheduleClick('${currentData.id}')" class="clase-container accent-orange-gradient">${currentData.materiaNombre} Prof: ${currentData.profesorNombre}</div>`).appendTo(`#${currentId}`);
+                                break
+                            }
+                        }
+                        allData.push(currentData)
+                        closeModal()
+                        emptyCurrentData()
+                    }
+                });
+        }
+
+        function onScheduleClick(id) {
+            currentData = allData.find(item => item.id === id)
+            $(`#datos-curso`).text("Curso: " + currentData.cursoNombre)
+            $(`#datos-paralelo`).text("Paralelo: " + currentData.paraleloNombre)
+            $(`#datos-materia`).text("Materia: " + currentData.materiaNombre)
+            $(`#datos-profesor`).text("Profesor: " + currentData.profesorNombre)
+            closeModal()
+            $('#modal1').toggleClass('is-visible');
+        }
+
+        function deleteClass() {
+            $.post("eliminarclase.php",
+                { claseId: currentData.id },
+                function (data, status) {
+                    alert("Data: " + data + "\nStatus: " + status);
+                    $(`#${currentData.id}`).remove()
+                    closeModal1()
+                    emptyCurrentData()
+                    currentId = ""
+                });
+        }
+    </script>
+</body>
+
+</html>
