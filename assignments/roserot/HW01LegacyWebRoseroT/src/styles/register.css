@@ -1,0 +1,242 @@
+/*
+.btn -> botones
+.nav -> navbar
+.card -> tarjetas
+.label -> etiquetas
+.link -> enlaces
+.modal -> modales
+.input -> inputs
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,500;1,700&display=swap');
+
+:root{
+	--primario-l: #2174ad;
+	--secundario-l: #82c885;
+	--terceario: #31a8f7;
+	--cuaternario-l: #8f6ded;
+	--background-l: #ebebeb;
+    
+    --text:#7C838A;
+
+    --primario-d: #008dff;
+	--secundario-d: #8df091;
+	--cuaternario-d: #6c3bf4;
+	--background-d: rgba(0, 0, 0, 0.75);
+}
+
+/* *{
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	text-transform: capitalize;
+    transition: all .25s;
+} */
+
+.card{
+    width: 100vw;  height: 100vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background:url(../utils/images/cielo.jpg) fixed no-repeat center;
+}
+
+.card:before{
+    content: "";
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    opacity: .9;
+}
+
+.content{
+    background-color:#fcfdffce;
+    backdrop-filter: blur(2px);
+    border-radius: 2vw;
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    z-index: 6;
+}
+
+#form{
+    height:fit-content;
+    width: 50%;   
+    margin: 3vh 0; 
+}
+
+#form label{
+    color: var(--text);
+}
+
+.label{
+    display: block;
+    margin: .5vh 5vw;
+
+}
+
+input{
+    padding: 1vh;
+    border-radius: 3vh;
+    font-size: large;
+    background-color: #b0bac39b   ;
+    width: 70%;
+    color:var(--background-d);
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input::placeholder{
+    color: var(--background-d);
+}
+
+h2{
+    margin-bottom: 2vh;
+    margin-top: 1vh;
+}
+
+.btn{
+    background: #486E9B;
+    color: var(--background-l);
+    width: auto;
+    border-radius: 1vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: larger;
+}
+
+.btn:hover{
+    background-color: var(--primario-d);
+}
+
+.btn-google{
+    background: rgba(255, 255, 255, 0.75) url("../utils/images/google.png") no-repeat left;
+    background-size: 12%;
+    color: var(--background-d);
+    border-radius: 1vh;
+    border-style: solid ;
+    border-color: gray;
+    border-width: 1px;
+    width: auto;
+    padding: 1vh .3vw 1vh 2.3vw; 
+    text-align: center;
+    margin-top: 1vh;
+}
+
+#btn_google:hover{
+    background-color:var(--background-l);
+}
+
+#imge{
+    /*background-color: yellow;*/
+    top: 2vh;
+    left: 40vw;
+    margin:0 auto;
+    position: absolute;
+    width: 25vw;
+    height:15vh;
+    padding: 0;
+    background-image: url("../utils/logos/Logo_claro.png") ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 6;
+}
+
+/* DARK MODE */
+
+#img{
+    width: 4vh;
+    position: absolute;
+    right: 26%;
+    top: 7%;
+    z-index: 1000;
+}
+
+#d-mode:checked + label>#img {
+    display: none;
+}
+
+#l-mode:checked + label>#img {
+    display: none;
+}
+
+
+#d-mode,#l-mode{
+display: none;
+}
+
+#switch-dark{
+    position: absolute;
+    right: 2vw;
+    top: 2vh;
+    z-index: 100;
+ }
+
+#l-mode:checked  ~ .card::before{
+    content: "";
+    background:url(../utils/images/Noche.jpg) fixed no-repeat center;
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+#l-mode:checked  ~ .card>.content{
+    background-color:var(--background-d);
+    color: var(--background-l);
+    box-shadow: 5px 5px 5px rgba(7, 7, 7, 0.6);
+
+}
+#l-mode:checked  ~ .card>.content>#form label{
+    color: var(--background-l);
+}
+#l-mode:checked  ~ .card>.content>#form .btn{
+    background: var(--primario-d);
+    color: var(--background-l);
+}
+
+#l-mode:checked  ~ .card>.content>#form .btn-google{
+    background: rgba(0, 0, 0, 0.561) url(../utils/images/google.png) no-repeat left ;
+    color: var(--background-l);
+    
+}
+
+#l-mode:checked  ~ .card input{
+    background-color: var(--text);
+    text-decoration-color: rgb(red, green, blue);
+    color: var(--background-l);
+}
+
+#l-mode:checked  ~ .card input::placeholder{
+    color: var(--background-l);
+}
+
+#l-mode:checked  ~ .card>.content>#form a{
+    color: var(--primario-d);
+}
+
+#l-mode:checked  ~ .card+#imge{
+    background-image: url("../utils/logos/Logo_dark.png") ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}   

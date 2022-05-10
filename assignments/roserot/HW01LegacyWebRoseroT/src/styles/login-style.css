@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,500;1,700&display=swap');
+
+
+
+.LoginS-bodylog{
+    background:url('../utils/images/FondoLoginLight.png') fixed no-repeat center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    padding: 5%;
+}
+
+.LoginS-logo{
+    background-image: url('../utils/logos/Logo_claro.png');
+    background-size: 100% 100%;
+    width: 40vw; height: 15vw;
+    background-repeat: no-repeat;
+    margin:0 auto;
+    position: absolute;
+    top: 10vw; left: 100vh;
+}
+
+#LoginS-img {
+    width: 10vh;
+    position: absolute;
+    left: 55vh;
+    top: 15vh;
+    z-index: 1;
+}
+
+.LoginS-container{
+    padding: 3vw;
+    color: white;
+    width: 60vh;
+    height: 85vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+}
+
+.LoginS-boxLog {
+    position: relative;
+    align-items: center;
+    height: 45vh;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.LoginS-userBox {
+    background: rgba(245, 245, 245, 0.4);
+    border-radius: 20px;
+    height: 5vh;
+    width: 50vh;
+    text-align: center;
+}
+.LoginS-botones{
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 30vh;
+}
+
+.LoginS-btn{
+    z-index: 2;
+    width: 206.56px;
+    height: 62.48px;
+    background: #008DFF;
+    border-radius: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 39px;
+    color: white;
+
+}
+#LoginS-btn_google{
+    background: rgba(70, 104, 137, 0.75) url('../utils/images/google.png') no-repeat 2vh;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 15px;
+    width: 222.82px;
+    height: 49.75px;
+    color: white;
+    position: relative;
+}
+
+#LoginS-l-mode:checked  ~ .LoginS-container::before {
+    background: rgba(11, 12, 12, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    transition: 2s;
+    
+}
+
+#LoginS-d-mode:checked + label>#LoginS-img {
+    display: none;
+}
+#LoginS-l-mode:checked + label>#LoginS-img {
+    display: none;
+}
+#LoginS-d-mode,#LoginS-l-mode{
+    display: none;
+}
+
+#LoginS-l-mode:checked  ~ ::before{
+    content: "";
+    background:url('../utils/images/Login\ dark.jpg') fixed no-repeat center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+
+#LoginS-l-mode:checked  ~ .LoginS-container>.LoginS-logo{
+    background: url('../utils/images/Logo_dark.png') ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 1;
+}
+
