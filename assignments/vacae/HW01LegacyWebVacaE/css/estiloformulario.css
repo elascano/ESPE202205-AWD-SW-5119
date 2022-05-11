@@ -1,0 +1,57 @@
+body{
+			font-family: 'Josefin Sans', sans-serif;
+			
+		}
+		form, .alert{
+		
+			width: 70%;
+		}
+		
+		.card, .titulo{
+		
+			width: 40%;
+			align-items: center;
+			margin:0 auto;
+			text-align: center;
+		}
+		.titulo{
+			margin-top: 70px;
+		}
+		
+		
+		::placeholder{
+	position: absolute;
+	padding: 5px;
+	font-size: 17px;
+	font-weight: 600;
+			
+			
+}
+		h3{
+			font-size: 40px;
+			font-weight: 700;
+			margin:  0 auto;
+		}
+		form.formulario input[type="text"],
+		form.formulario select,
+		form.formulario input[type="number"],
+		form.formulario input[type="email"],.alert{
+	
+	font-size: 17px;
+	font-weight: 600;
+}
+form.formulario input[type="submit"]{
+	margin-top: -50px;
+}
+		.card{
+			box-shadow: 2px 2px 5px #999;
+		}
+
+
+.tabla{
+	width: 99%;
+	margin:100px auto;
+	box-shadow: 2px 2px 5px #999;
+	font-size: 15px;
+}
+

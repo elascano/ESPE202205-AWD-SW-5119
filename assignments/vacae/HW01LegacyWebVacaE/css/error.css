@@ -1,0 +1,26 @@
+body {
+    background: #b92b27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: cursive;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;      
+    color: #fff;
+    font-size: 25px;
+
+} 
+/*--------------menu----------------*/
+
+h1{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+.img{
+    text-align: center;
+    border-radius: 15px;
+}
+.mensaje{
+    text-align: center;
+}
