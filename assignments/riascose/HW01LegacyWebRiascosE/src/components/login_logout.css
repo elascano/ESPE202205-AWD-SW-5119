@@ -1,0 +1,9 @@
+.login,
+.logout{
+    background-color: #e1d9ce;
+    height: 50px;
+    width: 110px;
+    font-size:larger;
+    font-weight: 600;
+    font-style: oblique;
+}
