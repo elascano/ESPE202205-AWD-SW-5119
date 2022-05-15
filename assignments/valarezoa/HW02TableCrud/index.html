@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> CRUD TABLE</title>
+<meta name="viewport" content="width=device-" charset="utf-8" /> 
+<link rel="stylesheet" type="text/css" href="estilos.css">
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+</head>
+<body>
+<h1> LIST CRUD</h1>
+<div class="container">
+    <div class="row">
+        <form  method="GET">
+            <legend>Name</legend>
+            <input type="text" class="form-control" id="name">
+            <br />
+            <legend>Age</legend>
+            <input type="number" step= "1"class="form-control" id="age">
+            <br />
+            <legend>Phone</legend>
+            <input type="number"  class="form-control" id="phonename">
+            <br />
+            <legend>Email</legend>
+            <input type="email" class="form-control" id="email">
+            <br />
+            <legend>Identification number</legend>
+            <input type="number" class="form-control" id="IdentificationNumber">
+            <br />
+            <br />
+            <button type="button" id="create" class="btn btn-success" onclick="view()">Do Table</button>
+            <button type="button" id="insert" class="btn btn-success" onclick="create()">Insert Person</button>
+            <button type="button" id="modify" class="btn btn-success" onclick="update(12)">Modify Record</button>
+            <button type="button" id="delete" class="btn btn-success" onclick="deleteStudent(12)">Delete</button>
+        </form>
+        <h2>List of Students</h2>
+        <table class="table" id="list-person" style="width: 715px">
+
+        </table>
+    </div>
+</div>
+<script type="text/javascript" src="crud.js"></script>
+</body>
+</html>
