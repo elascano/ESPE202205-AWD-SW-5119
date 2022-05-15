@@ -1,0 +1,284 @@
+<!-- Universidad de las Fuerzas Armadas "ESPE"
+Advanced Web Programming
+Author: Martín Andrés Medina Armijos
+HW02 TableCRUD
+Creation Date: 14/05/2022
+Uptade Date: 15/05/2022 */ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/index.css"
+          rel="stylesheet" type="text/css">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <h1> Operaciones CRUD </h1>
+    <div class="grid_simple">
+    <form class="grid_form">
+
+        <h3>Nombre: </h3>
+        <input type="text" size="25" id="name" value="" /> <br />
+        <h3>Color: </h3>
+        <input type="text" size="25" id="color" value=""/> <br />
+        <h3>Edad: </h3>
+        <input type="text" size="25" id="age" value=""/> <br />
+        <h3>Saltos por minuto: </h3>
+        <input type="text" size="25" id="skips" value=""/> <br /> <br />
+        <input type="button" value="Añadir" onclick="createRabbit()" />
+        <input type="button" value="Buscar" onclick="findRabbit()" />
+        <input type="button" value="Actualizar" onclick="updateRabbit()" />
+        <input type="button" value="Eliminar" onclick="deleteRabbit()" />
+
+    </form>
+    <div class="grid_table"> 
+        <div class="rabbit_row"> &nbsp; Nombre &nbsp; &nbsp; Color  &nbsp;&nbsp;   Edad  &nbsp;&nbsp;  Saltos por minuto &nbsp;</div> 
+    <div  id="rabbit_row">
+         </div>
+        </div>
+     </div>
+
+
+
+    <script>
+
+        const BASE_PATH = "http://localhost:3977/api";
+        const API_VERSION = "v1";
+
+        // APIs of CRUD
+
+        function createApi(data) {
+
+            const url = `${BASE_PATH}/${API_VERSION}/create`
+
+            const params = {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            };
+
+            return fetch(url, params).then(response => {
+                return response.json();
+            }).then(result => {
+                if (result.rabbit) {
+                    return {
+                        ok: true,
+                        message: "Conejo creado correctamente"
+                    };
+                }
+                return { ok: false, message: result.message };
+            }).catch(err => {
+                return { ok: false, message: err.message }
+            });
+        };
+
+
+        function findAllApi(){
+
+            const url = `${BASE_PATH}/${API_VERSION}/findAll`
+
+            const params = {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            };
+
+            return fetch(url, params)
+            .then(response => {
+                return response.json();
+            }).then(result => {
+                return result;
+            }).catch(err => {
+                return err.message;
+            });
+        };
+
+
+        function findApi(data) {
+
+            const url = `${BASE_PATH}/${API_VERSION}/find-name?name=${data.name}`
+            const params = {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            };
+
+            return fetch(url, params)
+            .then(response => {
+                return response.json();
+            }).then(result => {
+                return result;
+            }).catch(err => {
+                return err.message;
+            });
+        };
+
+
+        function updateApi(data) {
+
+            const url = `${BASE_PATH}/${API_VERSION}/update`
+
+            const params = {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            };
+
+            return fetch(url, params).then(response => {
+                return response.json();
+            }).then(result => {
+                if (result.user) {
+                    return {
+                        ok: true,
+                        message: "Conejo modificado correctamente"
+                    };
+                }
+                return { ok: false, message: result.message };
+            }).catch(err => {
+                return { ok: false, message: err.message }
+            });
+        };
+
+
+        function deleteApi(data) {
+
+            const url = `${BASE_PATH}/${API_VERSION}/delete`
+            const params = {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            };
+
+            return fetch(url, params).then(response => {
+                return response.json();
+            }).then(result => {
+                if (result.rabbit) {
+                    return {
+                        ok: true,
+                        message: "Conejo eliminado correctamente"
+                    };
+                }
+                return { ok: false, message: result.message };
+            }).catch(err => {
+                return { ok: false, message: err.message }
+            });
+        };
+        
+        
+
+        let rabbit;
+
+        function objectRabbit(_name, _color, _age, _skips){
+
+            rabbit = {
+                name: _name,
+                color: _color,
+                age: _age,
+                skips_per_minute: _skips,
+            };
+        };
+ 
+        //function's of CRUD
+
+        function findAllRabbit(){
+
+            let rabbit_row = document.getElementById("rabbit_row");
+            rabbit_row.innerHTML = "";
+
+            let rabbits = findAllApi().then(function(result){
+                let rabbit_array = result.rabbit.map(function(_rabbit){
+
+                    let rabbit_div = document.createElement("div");
+                    rabbit_div.className = "rabbit_row";
+                    let contend = document.createTextNode(
+                        '\u00A0 \u00A0 \u00A0' + _rabbit.name + ' | \u00A0 \u00A0 \u00A0'  
+                        + _rabbit.color + ' | \u00A0 \u00A0 \u00A0' +
+                        + _rabbit.age + ' | \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0' +
+                        + _rabbit.skips_per_minute + ' \u00A0 \u00A0'
+                    );
+                    rabbit_row.appendChild(rabbit_div);
+                    rabbit_div.appendChild(contend);
+                })
+            });
+            
+
+        };
+
+
+        function createRabbit() {
+            objectRabbit(document.getElementById("name").value,
+                         document.getElementById("color").value,
+                         document.getElementById("age").value,
+                         document.getElementById("skips").value);
+
+            createApi(rabbit);
+            findAllRabbit();
+        };
+
+
+        function findRabbit() {
+            let rabbit_row = document.getElementById("rabbit_row");
+            rabbit_row.innerHTML = "";
+
+            objectRabbit(document.getElementById("name").value,
+                         document.getElementById("color").value,
+                         document.getElementById("age").value,
+                         document.getElementById("skips").value);
+
+            let rabbits = findApi(rabbit).then(function(result){
+                let rabbit_array = result.rabbit.map(function(_rabbit){
+
+                    let rabbit_div = document.createElement("div");
+                    rabbit_div.className = "rabbit_row";
+                    let contend = document.createTextNode(
+                        '\u00A0 \u00A0 \u00A0' + _rabbit.name + ' | \u00A0 \u00A0 \u00A0'  
+                        + _rabbit.color + ' | \u00A0 \u00A0 \u00A0' +
+                        + _rabbit.age + ' | \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0' +
+                        + _rabbit.skips_per_minute + ' \u00A0 \u00A0'
+                    );
+                    rabbit_row.appendChild(rabbit_div);
+                    rabbit_div.appendChild(contend);
+                })
+            });
+            
+        };
+
+
+        function updateRabbit() {
+            objectRabbit(document.getElementById("name").value,
+                         document.getElementById("color").value,
+                         document.getElementById("age").value,
+                         document.getElementById("skips").value);
+            updateApi(rabbit);
+            findAllRabbit();
+        };
+
+
+        function deleteRabbit() {
+            objectRabbit(document.getElementById("name").value,
+                         document.getElementById("color").value,
+                         document.getElementById("age").value,
+                         document.getElementById("skips").value);
+            deleteApi(rabbit);
+            findAllRabbit();
+        };
+
+    </script>
+</body>
+
+</html>

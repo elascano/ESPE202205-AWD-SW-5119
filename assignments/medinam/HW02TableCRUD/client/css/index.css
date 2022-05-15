@@ -1,0 +1,35 @@
+/*Universidad de las Fuerzas Armadas "ESPE"
+Advanced Web Programming
+Author: Martín Andrés Medina Armijos
+HW02 TableCRUD
+Creation Date: 14/05/2022
+Uptade Date: 15/05/2022 */
+
+.grid_simple{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 5% 30% 10% 50% 5% ;
+    grid-template-areas: 
+    ". form . table .";
+}
+
+.grid_form{
+    display: grid;
+    grid-area: form;
+}
+
+.grid_table{
+    display: grid;
+    grid-area: table;
+}
+
+.rabbit_row{
+    border-color: #70a2ee;
+    border-width: 3px;
+    border-style: solid;
+    text-align:center;
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+}
