@@ -1,0 +1,5 @@
+
+#esta relacionado a nodejs
+node_modules
+#variables de entorno
+.env
