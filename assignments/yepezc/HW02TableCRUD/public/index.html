@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    
+    <title>CRUD App</title>
+</head>
+<body>
+    <header>
+        <div class="navbar flex-box sticky">
+            <nav>
+                <h2 class="nav-title"> CRUD system </h2>
+                <div class="flex-box">
+                    <div><a href="index.html#createMovie">Create new Movie</a></div>
+                    <div><a href="index.html#showAllMovies">Show All Movies</a></div>
+                    <div><a href="index.html#updateMovie">Update a Movie</a></div>
+                    <div><a href="index.html#deleteMovie">Delete a Movie</a></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section name="createMovie" id="createMovie">
+        <div class="container formContainer">
+            <h2>Create a Movie</h2>
+          <form>
+            <ul class="flex-outer">
+              <li>
+                <label for="movieName">Movie Name</label>
+                <input type="text" id="movieName" placeholder="Enter Movie Name" name="movieName">
+              </li>
+              <li>
+                <label for="director">Director Name</label>
+                <input type="text" id="director" placeholder="Enter Director Name" name="director">
+              </li>
+              <li>
+                <label for="productor">Productor Name / Org</label>
+                <input type="text" id="productor" placeholder="Enter here"  name="productor">
+              </li>
+              <li>
+                <label for="yearOfRealease">Year Of Realease</label>
+                <input type="text" id="yearOfRealease" placeholder="Enter year of Realease"  name="yearOfRealease">
+              </li>
+              <li>
+                <label for="budget"> Budget in Millions </label>
+                <input type="text" id="budget" placeholder="Enter budget"  name="budget">
+              </li>
+              <li>
+                <button class="btn-primary"type="submit" onClick="createMovie()">Submit Movie</button>
+              </li>
+            </ul>
+          </form>
+        </div>
+
+    </section>
+    <section name="updateMovie" id="updateMovie">
+        <div class="container">
+        <h2>Update a Movie</h2>
+        <div class="container formContainer">
+            <h3>Movie Name</h3>
+            <ul class="flex-outer ">
+                <li>
+                  <label for="finder">Enter Movie Name to find</label>
+                  <input id="finder" type="text" placeholder="Movie to Find" name="finder">
+                </li>
+            </ul>
+        </div>
+        <div class="container formContainer">
+            <h3>Updated Data of Movie</h3>
+            <ul class="flex-outer">
+                <li>
+                <label for="updated-name">Update Movie Name</label>
+                  <input id="updated-name" type="text" placeholder="Movie Name" name="updated-name">
+                </li>
+                <li>
+                  <label for="updated-director">Director Name </label>
+                  <input type="text" id="updated-director" placeholder="Enter here"  name="updated-director">
+                </li>
+                <li>
+                    <label for="updated-productor">Productor Name / Org</label>
+                    <input id="updated-productor" type="text" placeholder="productor name" name="updated-productor">
+                  </li>
+                <li>
+                  <label for="updated-yearOfRealease">Year Of Realease</label>
+                  <input id="updated-yearOfRealease" type="text" placeholder="Year Of Realease" name="yearOfRealease">
+                </li>
+                <li>
+                  <label for="updated-budget"> Budget in Millions </label>
+                  <input id="updated-budget" type="text" placeholder="budget" name="updated-budget">
+                </li>
+                <li>
+                  <button class="btn-primary" onClick="updateMovie()" > Update Movie </button>
+                </li>
+            </ul>
+        </div>               
+    </div> 
+    </section>
+    <section name="deleteMovie" id="deleteMovie">
+        <div class="container">
+        <h2> Delete a Movie </h2>
+        <div class="formContainer">
+            <label for="deleted-name">Enter the Name to Erase</label>
+            <input id="deleted-name" type="text" placeholder="movie Name" name="deleted-name">
+        </div>
+        <button class="btn-primary" onClick="deleteMovie()" >Delete Movie</button>
+        </div>
+    </section>
+    <section name="showAllMovies" id="showAllMovies">
+        <div class="container">
+        <h2>Show All Movies</h2>
+        <table id="moviesTable"> </table>
+            <button class="btn-primary" onClick="createTable()" > Show Data </button>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+</html>
