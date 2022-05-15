@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="form">
+	 <form method="post" action="../php/add_computer.php">
+        <h1>Add Computer</h1>
+        
+        <fieldset>
+          <legend></legend>
+			<p>
+			  <label for="select"><b>Trademark:</b></label>
+			  <select name="trademark" id="idtrademark" required>
+				<option value="samsung">samsung</option>
+				<option value="hp">hp</option>
+				<option value="dell">dell</option>
+				<option value="apple">apple</option>
+				<option value="acer">acer</option>
+				<option value="toshiba">toshiba</option>
+				<option value="asus">asus</option>
+			  </select>
+			  <br>
+			</p>
+			
+			<p><label for="model"><b>Model:</b></label>
+         	<input type="text" id="idmodel" name="model" size="20"></p>
+			
+			<p><label for="storage"><b>Storage:</b></label>
+          	<input type="text" id="idstorage" name="storage">GB</p>
+			
+		 	<p><label for="processor"><b>Processor:</b></label>
+         	<input type="text" id="idprocessor" name="processor"></p>
+			
+			
+			<p><label for="price"><b>Price:</b></label>
+          	<input type="text" id="idprice" name="price" required></p>
+        </fieldset>       
+        
+        <button type="submit">Add</button>
+      </form>
+	</div>
+	
+</body>
+</html>
