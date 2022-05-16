@@ -42,7 +42,7 @@ if(isset($_POST['submit'])){
   </head>
   <body>
       <div class="form__div container">
-        <h1 class="title">Editar</h1>
+        <h1 class="title">Editar Anime</h1>
         <button class="form__button_save">
             <a href="display.php" >Regresar</a>
         </button>

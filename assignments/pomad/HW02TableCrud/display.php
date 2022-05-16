@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <div class="form__div">
-            <h1 class="title">Lista</h1>
+            <h1 class="title">Lista de Animes</h1>
             <button class="form__button_save">
                 <a href="index.php">Añadir</a>    
             </button>

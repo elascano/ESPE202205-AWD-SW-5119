@@ -30,7 +30,7 @@ if(isset($_POST['submit'])){
   </head>
   <body>
       <div class="form__div container">
-        <h1 class="title">Registro</h1>
+        <h1 class="title">Registrar Anime</h1>
         <br>
         <form method="post">
             <div class="form__item">
