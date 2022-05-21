@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Table CRUD</title>
+
+  </head>
+  <body>    
+    <div class="container">
+        <div class="databox">
+            <h4>Student Data</h4>
+            <form class="form" action="/crear" method="POST">
+                <div >
+                    <label for="nombre" >Name</label>
+                    <input id="nombre" name="name" type="text">
+                </div>
+                <div >
+                    <label for="edad" >Edad</label>
+                    <input id="edad" name="age" type="number">
+                </div>
+                <div >
+                  <label for="phone" >Phone</label>
+                  <input id="phone" name="phone" type="number">
+              </div>
+              <div >
+                  <label for="email" >Email</label>
+                  <input id="email" name="email" type="email">
+              </div>
+              <div >
+                <label for="id" >Id</label>
+                <input id="id" name="id" type="text">
+            </div>
+         </div> 
+                <button type="submit" class="btn-save"><i class="bi bi-save"></i>Insert Student</button>
+            </form>
+            <h4>Table of Students</h4>
+            <table id="styled-table" class="styled-table">
+                <thead>
+                    <tr>
+                        <th style="display: none;">ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Identification Card</th>
+                        <th>Methods</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%alumnos.forEach( (alumno) => { %>
+                        <tr>
+                            <td style="display: none;"><%= alumno._id %></td>
+                            <td><%= alumno.name %></td>
+                            <td><%= alumno.age %></td>
+                            <td><%= alumno.phone %></td>
+                            <td><%= alumno.email %></td>
+                            <td ><%= alumno.id %></td>
+                            <td>
+                                <a href="#modalAlumno" class="btnEditar"> Update</a>
+                                <a href="/borrar/<%= alumno._id %>" class="btntrash"> Detele</a></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+    </div>
+    <div id="modalAlumno" class="modal fade" tabindex="-1" aria-labelledby="modalAlumno" aria-hidden="true">
+      <div>
+        <div>
+          <div>
+            <h4 >Update Info</h4>
+            
+          </div>
+          <div class="container">
+            
+            <form class= "form" action="/editar" method="POST">
+                <input name="id_editar" id="id_editar" type="text" hidden>
+              <div >
+                <label for="nombre_editar">Name:</label>
+                <input id="nombre_editar" name="nombre_editar" type="text">
+              </div>
+              <div >
+                <label for="edad_editar">Age:</label>
+                <input id="edad_editar" name="edad_editar" type="number" >
+              </div>
+              <div >
+                <label for="phone_editar" >Phone:</label>
+                <input id="phone_editar" name="phone_editar" type="text"  >
+              </div>
+              <div >
+                <label for="email_editar" >Email:</label>
+                <input id="email_editar" name="email_editar" type="email" >
+              </div>
+              <div >
+                <label for="id_editar1" >ID:</label>
+                <input id="id_editar1" name="id_editar1" type="text" >
+              </div>
+           
+          </div>
+          <div class="container">              
+            <button type="submit" class="btn-save1" >Update</button>
+          </div>
+         
+        </form>
+        </div>
+      </div>
+  </div>
+  
+    <script src="/public/js/code.js"></script>
+  </body>
+</html>

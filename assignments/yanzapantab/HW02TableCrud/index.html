@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW02 CRUD</title>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css">
+    <script src="./script.js" defer></script>
+
+</head>
+<script type="text/javascript" src="./script.js"> </script>
+
+<body>
+    <h1>Consolas de Video Juegos</h1>
+    <section class="formText">
+        <form autocomplete="off" onsubmit="onFormSubmit()">
+            <div>
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="company">Empresa</label>
+                <input type="text" name="company" id="company">
+            </div>
+            <div>
+                <label for="age">Año</label>
+                <input type="number" name="age" id="age">
+            </div>
+            <div>
+                <label for="price">Precio</label>
+                <input type="number" name="price" id="price">
+            </div>
+
+            <div class="form_action--button">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar">
+            </div>
+        </form>
+    </section>
+
+    <section class="tableText">
+        <table class="list" id="storeList">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Empresa</th>
+                    <th scope="col">Año</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </section>
+</body>
+
+</html>

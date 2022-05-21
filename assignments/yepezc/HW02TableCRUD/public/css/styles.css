@@ -1,0 +1,137 @@
+/* author: christopher Yepez */
+/* general designs */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+*{
+  font-family: 'Raleway', sans-serif;
+  padding:0px;
+  letter-spacing: 0.5px;
+}
+
+body{
+  background-color:#F5F2E7;
+  margin: 0px;
+}
+
+h1{
+  color: #395B64;
+  font-size: 70px;
+  font-weight:700;
+}
+section{
+    margin: 0px auto;
+    padding: 2em;
+    border-bottom: 0.3175em solid #2C3333;
+}
+input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    transition:0.4s;
+}
+input[type=text]:focus {
+    border: 3px solid #555;
+  }
+
+/* container, flex-box*/
+.container{
+    width: auto;
+    margin: auto 3em;
+    
+}
+.formContainer{
+    max-width: 27.5em;
+}
+
+.flex-box{
+    display:flex;
+    flex-direction: row;
+}
+.flex-box div{
+    padding:0.3125em;
+    margin: auto 0.3125em;
+}
+.flex-box div a{
+    color: #F5F2E7;
+    text-decoration: none;
+    font-size:1em;
+    transition:0.4s;
+}
+.flex-box div a:hover{
+    color: #2666CF;
+}
+/* navbar*/
+.navbar{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    background: #2C3333;
+    justify-content: center;
+}
+
+.nav-title{
+    font-size:1.175em;
+    width:100%;
+    color: #F5F2E7; 
+    letter-spacing: 0.125em;
+    text-align:center;
+    margin: 0.3125em  auto ;   
+}
+/* table flexbox design get from "George Martsoukos" */
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 7.5em;
+  max-width: 13.75em;
+}
+ .flex-outer li{
+     margin: 1em auto;
+ }
+.flex-outer > li > label + *
+{
+    flex: 1 0 13.75em;
+}
+/*end table flex-box-design*/
+
+/*components */
+.btn-primary{
+    color: #2666CF;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 5px;
+    padding:0.3125em;
+    width: 130px;
+    transition:0.2s;
+    background-color:#2C3333;
+}
+
+.btn-primary:hover{
+    background-color:#124a5a;
+    color:#F5F2E7;
+
+}
+
+/*movies table dynamically created*/
+#moviesTable tr,#moviesTable td{
+    border:1px solid black;
+}
+#moviesTable th{
+    padding: 0.3125em;
+    margin: 1em;
+    color: #F5F2E7;
+    background-color:#395B64;
+}
+#moviesTable td{
+    padding: 0.3125em;
+    margin: 1em;
+    background-color:#124a5a;
+    color: #F5F2E7;
+}
+
