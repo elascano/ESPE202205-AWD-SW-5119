@@ -1,0 +1,38 @@
+﻿<!--author: Erick Riascos-->
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head >
+    <link rel="icon" href="https://previews.123rf.com/images/alekseyvanin/alekseyvanin1704/alekseyvanin170401410/75474020-icono-de-l%C3%ADnea-de-camiseta-ropa-contorno-vector-logo-ilustraci%C3%B3n-pictograma-lineal-aislado-en-blanco.jpg?fj=1" />
+    <title>Camisetas</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <center>
+        <div class="pageTittle"><h1>CAMISETAS</h1></div>
+        <div class="dataEntry">
+            Ingrese los datos:<br /><br />
+            Marca: <input id="shirtMark" type="text" /><br /><br />
+            Modelo: <input id="shirtModel" type="text" /><br /><br />
+            Talla:
+            <select id="shirtSize" name="size">
+                <option>Seleccione una talla</option>
+                <option>XXS</option>
+                <option>XS</option>
+                <option>S</option>
+                <option>XXL</option>
+                <option>XL</option>
+                <option>L</option>
+                <option>XXM</option>
+                <option>XM</option>
+                <option>M</option>
+            </select><br /><br />
+            Color: <input id="shirtColor" type="text" /><br /><br />
+            Precio: $ <input id="shirtPrice" type="number" /><br /><br />
+            <button onclick="generateTable();">Guardar</button>
+        </div>
+        <div id="dataTable">
+        </div>
+    </center>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+table{
+    width: auto;
+    margin: auto;
+    background: rgb(83, 83, 255);
+}
+
+table.list{
+    text-align: center;
+    width: 100%;
+}
+
+div{
+    text-align: left;
+    padding: 16px 30px;
+}
+
+button{
+    background: #eee;
+}
+

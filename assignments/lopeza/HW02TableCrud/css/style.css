@@ -1,0 +1,69 @@
+body {
+    width: 98%;
+    font-family: 'Commissioner', sans-serif;
+    color: #212121; 
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table, td, th {
+    border: 1px solid;
+}
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#add-car-btn {
+    text-align: left; 
+    margin: 20px 0px 10px;
+}
+
+.btnEditAction {
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.btnDeleteAction {
+    cursor: pointer;
+}
+
+#btnAddAction {
+    padding: 6px 20px;
+    color: #212121;
+    text-decoration: none;
+    border-radius: 3px;
+    cursor: pointer;
+    border: #212121 1px solid;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+#btnAddAction img {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#frmAdd div {
+    margin-bottom: 15px;
+}
+
+#frmAdd div label {
+    margin-left: 5px;
+}
+
+#btnSubmit, #btn {
+    padding: 8px;
+    background: #09F;
+    border: #048eec 1px solid;
+    color: #FFF;
+    font-size: 0.9em;
+    border-radius: 3px;
+    width: 150px;
+}

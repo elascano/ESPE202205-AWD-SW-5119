@@ -1,0 +1,25 @@
+/*author: Erick Riascos*/
+.pageTittle {
+
+}
+
+.dataEntry {
+    margin:10px;
+    width:300px; 
+    border:1px solid black;
+    padding:10px;
+}
+
+.dataTable{
+    border: 1px solid black;
+}
+
+.tableHeader {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.tableContent {
+    padding: 5px;
+    border: 1px solid black;
+}

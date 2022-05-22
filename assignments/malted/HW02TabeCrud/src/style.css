@@ -1,0 +1,18 @@
+.hedTitle{
+    color: rgb(42, 94, 161);
+    background-color: #16db93;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}
+body{
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container{
+    background-color: #16db93;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
