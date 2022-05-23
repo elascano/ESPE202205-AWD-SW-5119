@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/WebServices/GenericResource.java to edit this template
  */
-package webservices;
+package ec.edu.espe.webservices;
 
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
@@ -18,32 +18,35 @@ import javax.ws.rs.core.MediaType;
  *
  * @author yulia
  */
-@Path("student")
-public class StudentResource {
+@Path("dog")
+public class DogResource {
 
     @Context
     private UriInfo context;
 
     /**
-     * Creates a new instance of StudentResource
+     * Creates a new instance of DogResource
      */
-    public StudentResource() {
+    public DogResource() {
     }
 
     /**
-     * Retrieves representation of an instance of webservices.StudentResource
+     * Retrieves representation of an instance of
+     * ec.edu.espe.webservices.DogResource
+     *
      * @return an instance of java.lang.String
      */
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getText() {
-        //code to read from database
-        String student="{\name\":\"Yulliana\", \"age\": 20}";
-        return student;
+        String dog = "[{\"name\":\"Lulu\", \"owner\":\"Jose\", \"age\":2, \"weight\":1.0, \"breed\":\"schnauzer\"}, {\"name\":\"Luna\", \"owner\":\"Juan\", \"age\":5,\"weight\":2.0, \"breed\":\"beagle\"}, {\"name\":\"Coco\", \"owne0r\":\"Vanessa\", \"age\":3, \"weight\":1.0, \"breed\":\"chihuaga\"}, {\"name\":\"Toby\",\"owner\":\"Melanie\", \"age\":1, \"weight\":2.0, \"breed\":\"schnauzer\"}]";
+        //String dog = "{\name\":\"lulu\", \"owner\": \"Jose\", \"age\": 2 , \"weight\": 1, \"breed\":\"schnauzer\"}";
+        return dog;
     }
 
     /**
-     * PUT method for updating or creating an instance of StudentResource
+     * PUT method for updating or creating an instance of DogResource
+     *
      * @param content representation for the resource
      */
     @PUT
