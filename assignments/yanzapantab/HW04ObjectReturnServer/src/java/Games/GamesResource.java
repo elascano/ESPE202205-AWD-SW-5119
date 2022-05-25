@@ -38,7 +38,7 @@ public class GamesResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String getText() {
       String games = 
-             "[{\"name\":\"Clash Royale\",\"year\":2016,\"size\":2 GB,\"players\":\"1 player\",\"pegi info\":\"6+\"},"
+             "[{\"name\":\"Clash Royale\",\"year\":2016,\"size\":2.5 GB,\"players\":\"1 player\",\"pegi info\":\"6+\"},"
               + "{\"name\":\"GTA V\",\"year\":2013,\"size\":100 GB,\"players\":\"1 player\",\"pegi info\":\"18+\"}"
               + "{\"name\":\"Fornite\",\"year\":2017,\"size\":31 GB,\"players\":\"1 player\",\"pegi info\":\"12+,\"}"
               + "{\"name\":\"Elden Ring\",\"year\":2022,\"size\":45.76 GB,\"players\":\"1 player\",\"pegi info\":\"16+\"}"
