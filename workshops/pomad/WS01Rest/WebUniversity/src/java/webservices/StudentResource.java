@@ -38,7 +38,7 @@ public class StudentResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String getText() {
         // Code to read from database
-        String student = "{\"name\":\"Dayse\",\"age\":23}";
+        String student = "{\"name\":\"Henry\",\"age\":22}";
         return student;
     }
 

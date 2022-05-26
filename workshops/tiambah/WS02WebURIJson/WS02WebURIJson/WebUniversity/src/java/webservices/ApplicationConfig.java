@@ -7,10 +7,7 @@ package webservices;
 import java.util.Set;
 import javax.ws.rs.core.Application;
 
-/**
- *
- * @author Henry
- */
+
 @javax.ws.rs.ApplicationPath("webresources")
 public class ApplicationConfig extends Application {
 
@@ -29,7 +26,7 @@ public class ApplicationConfig extends Application {
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(webservices.InstructorResource.class);
-        resources.add(webservices.MedicineResource.class);
+        resources.add(webservices.StudentResource.class);
     }
     
 }
