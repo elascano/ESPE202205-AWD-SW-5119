@@ -38,7 +38,7 @@ public class MedicineResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String getText() {
        String medicine="{\"name\":\"Paracetamol\",\"price\":2,\"density\":5,\"id\":01,\"type\":1 ml}";
-    return medicine;
+       return medicine;
     }
 
     /**
