@@ -41,18 +41,11 @@ public class InstructorResource {
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     
-    
     public Instructor getInstructor(@PathParam("id") int id){
-    //public Instructor getJson() {
         //TODO return proper representation object
         
-        //llamada base de datos
-        /*
-        instructor=Controller
-        */
-        
         Instructor instructor = new Instructor();
-        instructor.setId(1232);
+        instructor.setId(id);
         instructor.setName("Francisco Suntaxi");
         instructor.setSalary(3824);
         instructor.setTC(true);

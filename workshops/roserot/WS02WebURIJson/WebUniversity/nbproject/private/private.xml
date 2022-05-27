@@ -2,14 +2,16 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/SEBAS/Documents/GitHub/ESPE202205-AWD-SW-5119/workshops/yanzapantab/WS01Rest/WebUniversity/web/index.html</file>
-            <file>file:/C:/Users/SEBAS/Documents/GitHub/ESPE202205-AWD-SW-5119/workshops/yanzapantab/WS01Rest/WebUniversity/src/java/webservices/StudentResource.java</file>
-        </group>
         <group name="Practicas">
             <file>file:/C:/Users/usuario/Desktop/WS01RestWebUniversity/WebUniversity/src/java/ec/edu/espe/university/model/Instructor.java</file>
             <file>file:/C:/Users/usuario/Desktop/WS01RestWebUniversity/WebUniversity/src/java/webservices/InstructorResource.java</file>
             <file>file:/C:/Users/usuario/Desktop/WS01RestWebUniversity/WebUniversity/nbproject/build-impl.xml</file>
+        </group>
+        <group>
+            <file>file:/C:/Users/USUARIO/Desktop/Web%20avanzada/Repositorio/ESPE202205-AWD-SW-5119/workshops/roserot/WS02WebURIJson/WebUniversity/src/java/webservices/ApplicationConfig.java</file>
+            <file>file:/C:/Users/USUARIO/Desktop/Web%20avanzada/Repositorio/ESPE202205-AWD-SW-5119/workshops/roserot/WS02WebURIJson/WebUniversity/src/java/webservices/StudentResource.java</file>
+            <file>file:/C:/Users/USUARIO/Desktop/Web%20avanzada/Repositorio/ESPE202205-AWD-SW-5119/workshops/roserot/WS02WebURIJson/WebUniversity/src/java/ec/edu/espe/university/model/Instructor.java</file>
+            <file>file:/C:/Users/USUARIO/Desktop/Web%20avanzada/Repositorio/ESPE202205-AWD-SW-5119/workshops/roserot/WS02WebURIJson/WebUniversity/src/java/webservices/InstructorResource.java</file>
         </group>
     </open-files>
 </project-private>
