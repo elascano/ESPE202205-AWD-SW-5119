@@ -53,7 +53,7 @@ function TestSupport() {
     this.og.src = "og.gif";
     this.cg = new Image();
     this.cg.src = "cg.gif";
-    
+
     this.viewIds = [
         { "id" : "table" , "name":"Tabular View", "type":"tableContent"}, 
         { "id" : "raw" , "name":"Raw View", "type":"rawContent"}, 
@@ -63,7 +63,6 @@ function TestSupport() {
     
     this.xhr = new XHR();
     this.wdr = new WADLParser();
-    
 }
 
 TestSupport.prototype = {    
