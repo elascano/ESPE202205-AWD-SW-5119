@@ -34,7 +34,7 @@ public class DBMongoManager {
                 "mongodb+srv://edison19:admin@cluster0.wvysmrz.mongodb.net/?retryWrites=true&w=majority");
         //mongodb+srv://edison19:admin@clusterawd.rbj5oin.mongodb.net/test
         client = new MongoClient(mongoURI);
-        database = client.getDB("MalteComputers");
+        database = client.getDB("AWD5119");
         collection = database.getCollection("Computers");
 
     }
