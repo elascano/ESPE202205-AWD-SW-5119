@@ -19,6 +19,22 @@ public class Furniture {
     private String type;
     private int persons;
 
+   public Furniture(){
+    }
+    
+    public Furniture(int idFurniture, String name, String adress, String date, String endurance, String color, String type, int persons) {
+        this.idFurniture = idFurniture;
+        this.name = name;
+        this.adress = adress;
+        this.date = date;
+        this.endurance = endurance;
+        this.color = color;
+        this.type = type;
+        this.persons = persons;
+    }
+
+    
+    
     /**
      * @return the idFurniture
      */
