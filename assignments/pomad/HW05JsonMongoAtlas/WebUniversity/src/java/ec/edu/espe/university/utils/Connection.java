@@ -21,6 +21,7 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
 import ec.edu.espe.university.model.Instructor;
+import org.bson.BSONObject;
 
 public class Connection {
     MongoDatabase dataBase; 
@@ -35,7 +36,7 @@ public class Connection {
     public Connection(String nameCollection) {
         try {
             this.nameCollection = nameCollection;
-            cluster = "mongodb+srv://dnpoma:12345@webuniversity.po9hy.mongodb.net/?retryWrites=true&w=majority";
+            cluster = "mongodb://dnpoma:12345@webuniversity-shard-00-00.po9hy.mongodb.net:27017,webuniversity-shard-00-01.po9hy.mongodb.net:27017,webuniversity-shard-00-02.po9hy.mongodb.net:27017/?ssl=true&replicaSet=atlas-cx7fk5-shard-0&authSource=admin&retryWrites=true&w=majority";
             MongoClientURI uri;
             uri = new MongoClientURI(cluster);
             mongoClient =  new MongoClient(uri);
