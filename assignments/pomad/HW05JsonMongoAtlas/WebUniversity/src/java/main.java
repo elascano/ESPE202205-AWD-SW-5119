@@ -18,12 +18,12 @@ public class main {
      */
     public static void main(String[] args) {
        Instructor instructor = new Instructor();
-       instructor.setId(5);
-       instructor.setName("Juan");
-       instructor.setSalary(800);
-       instructor.setTC(false);
+       instructor.setId(44);
+       instructor.setName("Maria");
+       instructor.setSalary(450);
+       instructor.setTC(true);
        Connection conection = new Connection("instructor");
-//       conection.insertInstructor(instructor);
+       conection.insertInstructor(instructor);
        
     }
     
