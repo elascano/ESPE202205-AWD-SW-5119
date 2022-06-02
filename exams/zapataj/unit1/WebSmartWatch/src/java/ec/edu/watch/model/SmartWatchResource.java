@@ -42,7 +42,7 @@ public class SmartWatchResource {
     @Produces(MediaType.APPLICATION_JSON)
 
     public ArrayList<SmartWatch> getJson() {
-    MongoCollection <Document> persona = new ConnectionDB().getDB().getCollection("SmartWatch");
+    MongoCollection <Document> persona = new ConnectionDB().getDB().getCollection("SmartWatches");
     for(int i=0;i<putJson().size();i++){    
     try{
         Document data= new Document();

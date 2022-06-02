@@ -50,7 +50,7 @@ public class InstructorResource {
      instructor.setName("Jonathan Zapata");
      instructor.setSalary(100);
      instructor.setTC(true);
-     MongoCollection <Document> persona = new ConexionDB().obtenerDB().getCollection("Instructor");
+     MongoCollection <Document> persona = new ConnectionDB().obtenerDB().getCollection("Instructor");
         try{
         Document data= new Document();
         data.put("ID",id);
@@ -69,5 +69,6 @@ public class InstructorResource {
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     public void putJson(Instructor content) {
+        
     }
 }
