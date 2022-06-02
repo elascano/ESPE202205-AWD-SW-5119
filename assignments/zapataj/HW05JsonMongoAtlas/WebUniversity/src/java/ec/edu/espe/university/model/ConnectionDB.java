@@ -15,7 +15,7 @@ import com.mongodb.client.MongoDatabase;
  *
  * @author HP
  */
-public class ConexionDB {
+public class ConnectionDB {
     
     
 ConnectionString connectionString = new ConnectionString("mongodb://SyndeNathan:athalie2001@cluster0-shard-00-00.3jfol.mongodb.net:27017,cluster0-shard-00-01.3jfol.mongodb.net:27017,cluster0-shard-00-02.3jfol.mongodb.net:27017/?ssl=true&replicaSet=atlas-o2vf6c-shard-0&authSource=admin&retryWrites=true&w=majority");
@@ -24,6 +24,7 @@ MongoClientSettings settings = MongoClientSettings.builder()
         .build();
 MongoClient mongoClient = MongoClients.create(settings);
 MongoDatabase database = mongoClient.getDatabase("University");
+
 
 public MongoDatabase obtenerDB()
 {
