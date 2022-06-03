@@ -9,8 +9,8 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import java.util.Date;
-import ec.espe.edu.util.DBManager;
-import ec.espe.edu.util.MongoDBManage;
+import ec.espe.edu.utilities.DBManager;
+import ec.espe.edu.utilities.MongoDBManager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import org.bson.Document;
@@ -22,7 +22,7 @@ import ec.espe.edu.model.Universities;
  * @author User
  */
 public class UniversitiesController {
-    private Universities universities;
+    private Universities employee;
     private String uri;
     private Connection conn;
     private PreparedStatement  stm;
@@ -30,26 +30,36 @@ public class UniversitiesController {
     private MongoCollection<Document> collection;
     private Document document =new Document("_id", new ObjectId());
     
-    
-    public UniversitiesController(Universities universities) {
-        this.universities = universities;
+     public UniversitiesController(Universities employee) {
+        this.employee = employee;
         
-        this.uri = "mongodb+srv://edison19:admin@clusterawd.rbj5oin.mongodb.net/test";
+        this.uri = "localhost:27017";
     }
-    public String insertUniversitiesMongo(String idUniversities, String name, String address, String telephone, String mail){
+     
+    public String insertEmployeeMongo(String idEmployee, String name, String address, String telephone, String mail, String lastJob, String bornYear){
         MongoClientURI uriMongo = new MongoClientURI(this.uri);
         try(MongoClient mongoClient = new MongoClient(uriMongo)){
-            this.dataBase = mongoClient.getDatabase("company");			
-            this.collection = this.dataBase.getCollection("universities");
-            this.document.append("id", this.universities.getIdUniversities());
-            this.document.append("name", this.universities.getName());
-            this.document.append("Adress", this.universities.getAddress());
-            this.document.append("telephone", this.universities.getTelephone());
-            this.document.append("mail", this.universities.getMail());
+            this.dataBase = mongoClient.getDatabase("Company");			
+            this.collection = this.dataBase.getCollection("Universities");
+            this.document.append("id", this.employee.getIdUniversities());
+            this.document.append("name", this.employee.getName());
+            this.document.append("Adress", this.employee.getAddress());
+            this.document.append("telephone", this.employee.getTelephone());
+            this.document.append("mail", this.employee.getMail());
+            this.document.append("type", this.employee.getType());
+            this.document.append("date", this.employee.getDate());
             this.collection.insertOne(this.document);
-            return "universities saved in MongoDB!" ;
+            return "Employee saved in MongoDB!" ;
         }catch(Exception ex){
             return "Cant connect with data base.";
         }
     }
+
 }
+
+
+
+
+
+ 
+
