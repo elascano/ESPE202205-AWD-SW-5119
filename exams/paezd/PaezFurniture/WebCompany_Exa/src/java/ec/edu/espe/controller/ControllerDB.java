@@ -25,69 +25,54 @@ import java.util.logging.Logger;
  */
 public class ControllerDB {
 
-    private MongoClientURI mongoURI;
+   private MongoClientURI mongoURI;
     private MongoClient client;
     private DB database;
     private DBCollection collection;
-
-    public ControllerDB() {
+    
+    public  ControllerDB() {
         mongoURI = new MongoClientURI(
-                "mongodb+srv://root:root@cluster0.uzn80.mongodb.net/?retryWrites=true&w=majority");
+                "mongodb+srv://edison19:admin@clusterawd.rbj5oin.mongodb.net/?retryWrites=true&w=majority");
         client = new MongoClient(mongoURI);
-        database = client.getDB("webservices");
+        database = client.getDB("AWD5119");
         collection = database.getCollection("Furniture");
     }
 
- 
-
-    public String search(int id) {
-
+    public String search(int idFurniture) {
+       
         String furniture = "";
         BasicDBObject busqueda = new BasicDBObject();
-        busqueda.put("idFurniture", id);
+        busqueda.put("idFurniture",idFurniture);
         DBCursor cursor = collection.find(busqueda);
         if (cursor.hasNext()) {
-            while (cursor.hasNext()) {
-                furniture += cursor.next();
+           while(cursor.hasNext()){
+            furniture += cursor.next();
             }
         }
         return furniture;
     }
 
-    public String find(int idFurniture) {
-
+        public String find(int idFurniture) {
+       
         String furniture = "";
         BasicDBObject busqueda = new BasicDBObject();
-        busqueda.put("idFurniture", idFurniture);
+        busqueda.put("idFurniture",idFurniture);
         DBCursor cursor = collection.find();
-
-        while (cursor.hasNext()) {
+        
+           while(cursor.hasNext()){
             furniture += cursor.next();
-        }
-
+            }
+        
         return furniture;
     }
-    public String found(String name) {
-
+        
+        public String read(){
         String furniture = "";
-        BasicDBObject busqueda = new BasicDBObject();
-        busqueda.put("name", name);
         DBCursor cursor = collection.find();
-
-        while (cursor.hasNext()) {
+        while(cursor.hasNext()){
             furniture += cursor.next();
         }
-
         return furniture;
     }
-    public String read() {
-        String Furniture = "";
-        DBCursor cursor = collection.find();
-        while (cursor.hasNext()) {
-            Furniture += cursor.next();
-        }
-        return Furniture;
-    }
-
    
 }

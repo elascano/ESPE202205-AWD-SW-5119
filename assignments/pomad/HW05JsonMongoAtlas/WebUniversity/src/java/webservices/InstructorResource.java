@@ -65,7 +65,6 @@ public class InstructorResource {
         Connection dataBaseInstructor = new Connection("instructor");
         
         instructor = dataBaseInstructor.getInstructorById(id);
-        System.out.println("No:(");
         return instructor;
     }
     
