@@ -1,4 +1,6 @@
- let listar_productos = async() => {
+ /* global axios */
+
+let listar_productos = async() => {
     let productos;
     await axios({
             method: 'get',
@@ -16,7 +18,7 @@
   let mostrar_datos = async() => {
   let productos = await listar_productos();
             tbody.innerHTML = '';
-            for (let i = 0; i < productos.length; i++) {
+            for (let i = 0; i < productos.length() ; i++) {
                 let fila = tbody.insertRow();
                 fila.insertCell().innerHTML = productos[i]['Id'];
                 fila.insertCell().innerHTML = productos[i]['Name'];
