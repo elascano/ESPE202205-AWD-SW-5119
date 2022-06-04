@@ -2,14 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package webServices;
+package Controller;
 
 import java.util.Set;
 import javax.ws.rs.core.Application;
 
 /**
  *
- * @author avand
+ * @author marce
  */
 @javax.ws.rs.ApplicationPath("webresources")
 public class ApplicationConfig extends Application {
@@ -28,8 +28,7 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(webServices.StudentResource.class);
-        resources.add(webServices.studentResources.class);
+        resources.add(Controller.MusicInstResource.class);
     }
     
 }
