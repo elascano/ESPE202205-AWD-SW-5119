@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>University</title>
+        <meta charset="UTF-8">
+         <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+             <nav class="nav-menu">
+                <a class="title"  href="#">
+                       <span>Universidad</span>
+                </a>
+                <a class="header--link" href="#">
+                        <span>Instructor</span>
+                </a>
+                <a class="header--link" href="#">
+                        <span>Estudiante</span>
+                </a>
+            </nav>
+        </header>
+        <section class="container">
+             <h1>Instructor</h1>
+            <form action="webresources/instructor/insert" method="post">
+
+            <label>Enter Id:</label>
+            <input type="text" name="id" class="form__input" /><br/><br/>
+            <label>Enter Name:</label>
+            <input type="text" name="name" class="form__input"/><br/><br/>
+            <label>Enter Salary:</label>
+            <input type="text" name="salary" class="form__input"/><br/><br/>
+            <label>Enter TC:</label>
+            <input type="text" name="TC" class="form__input"/><br/><br/>
+            <button type="submit" name="submit"  class="form__button_save">Add Instructor</button>
+            </form>
+        </section>
+            
+       
+
+    </body>
+</html>
