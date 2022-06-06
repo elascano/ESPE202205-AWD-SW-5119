@@ -1,0 +1,110 @@
+/* 
+    Created on : 29 may 2022, 23:41:50
+    Author     : Dayse
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, 
+button, 
+input, 
+textarea{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+input,button,select,textarea{outline:none}
+
+textarea{
+    resize:none;
+}
+
+th, td {
+    text-align: left;
+    padding-left: 0.5rem;
+    border-collapse: collapse;
+    border-bottom: 1px dotted  rgb(161, 160, 160);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+button{
+    margin: 0.5em 0;
+}
+
+label{
+    font-size: large;
+}
+
+.container{
+    max-width: 1000px;
+    width: 100%;
+    flex: 1;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+    margin-top: 1rem;
+}
+
+.title{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+}
+
+
+.form__button_save{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.form__button_save:hover {
+    background-color: #3c913f;
+    color: white;
+}
+
+.nav-menu{
+    background-color: #5E6A73;
+    padding: 1em;
+}
+
+
+.header--link{
+    justify-content: space-evenly;
+    margin: 0em 0.5em;
+}
+
+.header--link:hover{
+    color: #BCD4E6;
+}
+
+.form__input{
+    width: 100%;
+    height: 100%;
+    color: rgb(58, 58, 58);
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
