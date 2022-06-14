@@ -14,6 +14,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.core.MediaType;
+import static jdk.nashorn.internal.runtime.Debug.id;
 
 /**
  * REST Web Service
@@ -40,7 +41,7 @@ public class InstructorResource_1 {
     @Produces(MediaType.APPLICATION_JSON)
     public Instructor getJson() {
         Instructor instructor = new Instructor();
-        instructor.setId(id);
+
         instructor.setName("STALIN RIVERA");
         instructor.setSalary(425);
         instructor.setTC(true);
