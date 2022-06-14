@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Client Management</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <center><br><h1>Client Form</h1></center>
+        <main>
+            <form action="../jsps/addClient.jsp" id="form1">
+                <div class="row">
+                    <label class="label">First Name: </label>
+                    <input type="text" id="firstName" name="firstName" class="input">
+                </div>
+                <div class="row">
+                    <label class="label">Last Name: </label>
+                    <input type="text" id="lastName" name="lastName" class="input">
+                </div>
+                <div class="row">
+                    <label class="label">C.I.: </label>
+                    <input type="text" id="ci" name="ci"  placeholder="1748586330" class="input">
+                </div>
+                <div class="row">
+                    <label class="label">Email: </label>
+                    <input type="email" id="email" name="email" class="input">
+                </div>
+                <div class="row">
+                    <label class="label">Born Date: </label>
+                    <input type="date" id="bornDate" name="bornDate" class="input">
+                </div>
+                <center><p>
+                        <input type="button" id="save" name="save" value="Save">
+                    </p></center>
+            </form>
+        </main>
+        <a href="../index.html" class="return">Return</a>
+        <footer class="footer">Christian Novoa</footer>
+        <script src="../js/script.js"></script>
+    </body>
+</html>
