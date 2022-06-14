@@ -1,0 +1,6 @@
+{
+    "require": {
+        "mongodb/mongodb": "^1.12",
+        "easy-projects/simple-router": "^7.1"
+    }
+}
