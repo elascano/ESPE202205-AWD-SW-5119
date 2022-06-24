@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author avand
+ * @author usuario
  */
 public abstract class ProductController {
     

@@ -25,7 +25,7 @@ import javax.ws.rs.core.MediaType;
 /**
  * REST Web Service
  *
- * @author avand
+ * @author usuario
  */
 @Path("product")
 public class ProductWebServices {

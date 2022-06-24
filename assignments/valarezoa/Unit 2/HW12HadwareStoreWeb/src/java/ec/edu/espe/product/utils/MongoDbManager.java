@@ -14,7 +14,7 @@ import org.bson.Document;
 
 /**
  *
- * @author avand
+ * @author usuario
  */
 public class MongoDbManager {
         public static boolean save(String data){
