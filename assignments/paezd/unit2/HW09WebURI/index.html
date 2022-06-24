@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats Api</title>
+
+    <style>
+        .img {
+            width: 30%;
+        }
+        
+        body {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body class="jumbotron">
+
+    <div class="head text-center">
+        <h1 class="">Cat's Facts Api</h1>
+        <img class="img" src="animal.png" alt=""><br>
+    </div>
+
+    <div class="modal" id="model" tabindex="-1" role="dialog">
+        <div role="document">
+            <div>
+                <div>
+                    <h5>Cats facts generator</h5>
+                </div>
+                <div>
+                    <form>
+                        <p>
+                            <label for="animal_type">Animal Type</label>
+                            <input type="text" id="animal_type" placeholder="Cat, Dog, Horse or Snail">
+                        </p>
+                        <p>
+                            <label for="num_facts">Number of Facts</label>
+                            <input type="number" id="num_facts" placeholder="Max: 500">
+                        </p>
+                    </form>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary generate_btn" data-dismiss="modal">Generate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="facts">
+
+    </div>
+
+    <script src="app.js" charset="utf-8"></script>
+</body>
+
+</html>

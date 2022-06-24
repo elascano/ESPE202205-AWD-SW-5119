@@ -6,7 +6,8 @@ package ec.edu.product.model;
 
 /**
  *
- * @author avand
+ * @author usuario
+ * 
  */
 public class Product {
     private int idItem;
