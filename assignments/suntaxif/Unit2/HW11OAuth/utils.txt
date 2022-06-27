@@ -1,0 +1,6 @@
+npm init -y
+npm i express ejs passport express-session passport-discord dotenv
+npm install nodemon -D
+discord:
+	client secret: 1RYsJe4dXQqZfT2f0AHZZlDf8704iHBi
+	client id: 987921795929759754
