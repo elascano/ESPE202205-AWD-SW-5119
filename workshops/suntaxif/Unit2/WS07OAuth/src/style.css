@@ -1,0 +1,23 @@
+img{
+    height: 100px;
+    width: 100px;
+    position: center;
+}
+.login-style{
+    text-align: center;
+}
+
+
+.btn{
+    text-decoration:none;
+    color: black;
+    background-color: greenyellow;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 20%;
+}
+
+body{
+    padding: 1%;
+    background-color:aquamarine;
+}
