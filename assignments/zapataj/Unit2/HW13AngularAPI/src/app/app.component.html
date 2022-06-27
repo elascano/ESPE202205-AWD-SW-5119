@@ -1,0 +1,18 @@
+<h2> SmartWatch (http://localhost:5000/smartWatch)</h2>
+<h3>Jonathan Zapata</h3>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Market</th>
+    <th>Price $</th>
+    <th>Software</th>
+  </tr>
+</thead>
+  <tr *ngFor="let com of lstcomments">
+    <td>{{com.idSmart}}</td>
+    <td>{{com.market}}</td>
+    <td>{{com.price}}</td>
+    <td>{{com.software}}</td>
+  </tr>
+</table>
