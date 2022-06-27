@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>López</title>
+</head>
+
+<body>
+    <div class="content unauthorized">
+        <div class="login-style">
+            <h1>Login with Github OAuth 2.0 Example</h1>
+            <h2>Andrés López</h2>
+            <img src="img/github.png" alt="GitHub Logo">
+            <div class="content-bottom">
+                <a href="/auth" class="btn">Sign In with GitHub</a>
+            </div>
+        </div>
+    </div>
+    <div class="content authorized" style="display: none">
+        <div class="login-style">
+            <img src="img/github.png" alt="GitHub Logo">
+            <h2>You are Authorized!</h2>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
