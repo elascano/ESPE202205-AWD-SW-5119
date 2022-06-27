@@ -1,0 +1,118 @@
+package ec.edu.espe.hardwareStore.model;
+
+/**
+ *
+ * @author marce
+ */
+public class Items {
+
+    private int idItem;
+    private String name;
+    private String itemBrand;
+    private String description;
+    private double price;
+    private int inStock;
+
+    public Items(int idItem, String name, String itemBrand, String description, float price, int inStock) {
+        this.idItem = idItem;
+        this.name = name;
+        this.itemBrand = itemBrand;
+        this.description = description;
+        this.price = price;
+        this.inStock = inStock;
+    }
+
+    public Items() {
+        idItem = 0;
+        name = "";
+        itemBrand = "";
+        description = "";
+        price = 0.0;
+        inStock = 0;
+    }
+
+    /**
+     * @return the idItem
+     */
+    public int getIdItem() {
+        return idItem;
+    }
+
+    /**
+     * @param idItem the idItem to set
+     */
+    public void setIdItem(int idItem) {
+        this.idItem = idItem;
+    }
+
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * @return the itemBrand
+     */
+    public String getItemBrand() {
+        return itemBrand;
+    }
+
+    /**
+     * @param itemBrand the itemBrand to set
+     */
+    public void setItemBrand(String itemBrand) {
+        this.itemBrand = itemBrand;
+    }
+
+    /**
+     * @return the description
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * @param description the description to set
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * @return the price
+     */
+    public double getPrice() {
+        return price;
+    }
+
+    /**
+     * @param price the price to set
+     */
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    /**
+     * @return the inStock
+     */
+    public int getInStock() {
+        return inStock;
+    }
+
+    /**
+     * @param inStock the inStock to set
+     */
+    public void setInStock(int inStock) {
+        this.inStock = inStock;
+    }
+
+}
