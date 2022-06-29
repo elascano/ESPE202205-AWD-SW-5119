@@ -1,0 +1,36 @@
+<style>
+  .tableComment{
+    background-color: black;
+  }
+  .tableComment th{
+    background-color:rgb(8, 8, 139);
+    color:rgba(240, 248, 255, 0.833);
+    margin:0.25em;
+    padding:0.25em;
+  }
+  .tableComment tr{
+    background-color:blue;
+    margin:0.25em;
+  }
+  .tableComment td{
+    padding:0.25em;
+  }
+</style>
+<h2>Get Request (https://jsonplaceholder.typicode.com/posts/1/comments)</h2>
+<h3>CHRISTOPHER YEPEZ</h3>
+<table class="tableComment">
+  <tr>
+    <th> ID </th>
+    <th> POST ID </th>
+    <th> Name </th>
+    <th> Email </th>
+    <th> Body </th>
+  </tr>
+  <tr *ngFor="let com of lstcomments">
+    <td>{{com.id}}</td>
+    <td>{{com.postId}}</td>
+    <td>{{com.name}}</td>
+    <td>{{com.email}}</td>
+    <td>{{com.body}}</td>
+  </tr>
+</table>

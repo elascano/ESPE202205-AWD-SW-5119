@@ -1,0 +1,21 @@
+<h2>Get Request http://localhost:8080/hardwareStore/resource/hardwareStore/</h2>
+<h3>Edison Vaca :)</h3>
+<table bgColor="aquamarine">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Brand</th>
+    <th>In Stock</th>
+    <th>Price</th>
+  </tr>
+  <tr *ngFor="let com of lstcomments">
+    
+    <td>{{com.description}}</td>
+    <td>{{com.idItem}}</td>
+    <td>{{com.inStock}}</td>
+    <td>{{com.itemBrand}}</td>
+    <td>{{com.name}}</td>
+    <td>{{com.price}}</td>
+  </tr>
+</table>

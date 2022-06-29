@@ -1,0 +1,17 @@
+img{
+    height: 80px;
+    width: 100px;
+    position: center;
+}
+
+.login-style{
+    text-align: center;
+}
+
+.btn{
+    text-decoration: none;
+    color: #F1C40F;
+    background-color: #D35400;
+    font-size: 20px;
+    border-radius: 18px;
+}

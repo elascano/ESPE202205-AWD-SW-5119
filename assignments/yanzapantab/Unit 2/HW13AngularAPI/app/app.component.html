@@ -1,0 +1,19 @@
+<h2>Get Request (https://jsonplaceholder.typicode.com/albums/1/photos) </h2>
+<h2>Bryan Yanzapanta</h2>
+<table border="Roswpan" style="background-color: whitesmoke">
+  <tr>
+    <th>ALBUM</th>
+    <th>ID</th>
+    <th>TITLE</th>
+    <th>URL</th>
+    <th>THUMB NAIL</th>
+    
+  </tr>
+  <tr *ngFor="let com of lstcomments">
+    <td>{{com.albumId}}</td>
+    <td>{{com.id}}</td>
+    <td>{{com.title}}</td>
+    <td>img{{com.url}}</td>
+    <td><img src="{{com.thumbnailUrl}}" alt=""></td>
+     </tr>
+  </table>
