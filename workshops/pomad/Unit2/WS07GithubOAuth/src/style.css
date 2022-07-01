@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-style h2{
+    color: rgb(255, 98, 177);
+}
+.login-style{
+    justify-content: center;
+    width: 100%;
+    padding: 10%;
+    padding-bottom: 20%;
+    margin-top: 50%;
+    align-items: center;
+    box-shadow: 0px 4px 9px -1px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.conten-bottom{
+    display: inherit;
+    margin-top: 45px;
+}
+
+.login-style img{
+    width: 110px;
+}
+
+.btn{
+    margin: 15px;
+    padding: 15px;
+    text-decoration: none;
+    width: 220px;
+    text-align: center;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 9px -1px rgba(0, 0, 0, 0.25);
+}
