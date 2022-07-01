@@ -1,0 +1,21 @@
+<h2>Get Request (https://jsonplaceholder.typicode.com/posts/1/comments)</h2>
+
+<h3>JERICO RUIZ</h3>
+<br>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Post ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Body</th>
+  </tr>
+  <tr *ngFor="let com of lstcomments">
+    <td width="10%" bgcolor="blue" style="color:#ffffff">{{com.id}}</td>
+    <td bgcolor="blue" style="color:#ffffff" >{{com.postId}}</td>
+    <td bgcolor="blue" style="color:#ffffff">{{com.name}}</td>
+    <td bgcolor="blue" style="color:#ffffff">{{com.email}}</td>
+    <td bgcolor="blue" style="color:#ffffff">{{com.body}}</td>
+
+  </tr>
+</table>
