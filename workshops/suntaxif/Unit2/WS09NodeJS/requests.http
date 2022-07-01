@@ -1,0 +1,17 @@
+###
+POST http://localhost:9000/api/shoes HTTP/1.1
+Content-Type: application/json
+
+{
+    "id":3,
+    "trademark":"VENUS",
+    "size":40,
+    "price":25.50
+} 
+
+###
+GET  http://localhost:9000/api/shoes HTTP/1.1
+
+###
+GET  http://localhost:9000/api/shoes/62bf472bb568c20b91817bb3 HTTP/1.1
+
