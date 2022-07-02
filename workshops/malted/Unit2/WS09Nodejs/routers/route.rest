@@ -1,0 +1,13 @@
+GET  http://localhost:3000/computers
+
+###
+POST http://localhost:3000/computers
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "AsusComputer",
+  "model": "Asus",
+  "size": "14",
+  "color": "Gray"
+}
