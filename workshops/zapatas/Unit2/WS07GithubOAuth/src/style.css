@@ -1,0 +1,19 @@
+img{
+    height: 100px;
+    width: 100px;
+    position: center;
+}
+
+.login-style{
+    text-align: center;
+}
+
+body{
+    background-color: aqua;
+}
+
+.btn{
+    text-decoration:none;
+    color:blue;    
+    width: 220px;
+}
