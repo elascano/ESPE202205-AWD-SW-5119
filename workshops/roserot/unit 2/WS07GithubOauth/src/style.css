@@ -1,0 +1,20 @@
+img {
+    height: 100px;
+    width: 100px;
+    position: center;
+    background-color: rgb(202, 219, 46);
+
+}
+.login-style{
+    text-align: center;
+    display:block;
+
+}
+
+.btn{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(37, 153, 43);
+    font-size: 20px;
+    border-radius: 20px;
+}
