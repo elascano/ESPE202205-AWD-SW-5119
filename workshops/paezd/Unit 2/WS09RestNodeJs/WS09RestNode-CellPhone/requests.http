@@ -1,0 +1,16 @@
+###
+POST http://localhost:9000/api/furnitures HTTP/1.1
+Content-Type: application/json
+
+{  "idFurniture": 3,  "name": "Tu hogar",  "adress": "Guayaquil",  "date": "05/09/2019",  "endurance": "200lbs",  "color": "red",  "type": "table",  "persons": 6}
+###
+GET http://localhost:9000/api/furnitures HTTP/1.1
+
+###
+GET http://localhost:9000/api/furnitures/62a2c01ad3e8764da3baae75 HTTP/1.1
+
+###
+DELETE http://localhost:9000/api/furnitures/62a2d2145e4adb37b7b1a43f HTTP/1.1
+###
+PUT http://localhost:9000/api/furnitures/62a2c01ad3e8764da3baae75 HTTP/1.1
+Content-Type: application/json
