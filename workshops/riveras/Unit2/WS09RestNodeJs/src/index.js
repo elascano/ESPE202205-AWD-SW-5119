@@ -17,7 +17,7 @@ app.get("/",(req,res)=>{
 })
 
 //conection
-mongoose.connect("mongodb+srv://stalin0:admin@cluster0.hre2t1k.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect("mongodb")
 .then(()=>console.log("Connect to MongoDB")).catch((error)=>console.error(error));
 
 
