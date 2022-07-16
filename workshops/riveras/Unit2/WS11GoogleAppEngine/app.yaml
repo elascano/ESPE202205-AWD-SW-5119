@@ -1,0 +1,7 @@
+runtime: nodejs16
+handlers:
+  - url: /
+    static_files: dist/angular-httpclient/index.html
+    upload: dist/angular-httpclient/index.html
+  - url: /
+    static_dir: dist/angular-httpclient
