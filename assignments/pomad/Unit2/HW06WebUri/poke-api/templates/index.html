@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokemon API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"
+    />
+
+</head>
+<body>
+    <h1 class="text-center">POKEMON</h1>
+    <div class="centered">
+        <div class="card p-4 text-center shadow-sm p-3 mb-5 bg-body ">
+            <div class="avatar rounded-circle inline-block">
+                <img class="card-image" id="image_url" src={{recentPokemon.image_url}} alt= {{recentPokemon.name}}></div>
+                <h4  id="name" class="mt-2">
+                    {{recentPokemon.name}}
+                </h4>
+                <div class="items-card">
+                    <label class="sub-items"><b>SPEED</b> <span id="speed" >{{recentPokemon.speed}}</span></label>
+                    <label class="sub-items"><b>DEFENSE</b> <span id="defense">{{recentPokemon.defense}}</span></label>
+                    <label class="sub-items"><b>ATTACK</b> <span id="attack">{{recentPokemon.attack}}</span></label>
+                    <label class="sub-items"><b>HP</b> <span id="hp">{{recentPokemon.hp}}</span></label>
+                    <label class="sub-items"><b>WEIGHT</b> <span id="weight">{{recentPokemon.weight}}</span></label>
+                </div>
+            </div>
+            <div class="btn btn-primary" onclick="randomPokemon()">UPDATE</div>
+    </div>
+    <div class="container list-items">
+        <h2 class="text-center">LIST OF POKEMONS</h2>
+        <div class="">
+            <ul>
+                {% for pokemon in pokemons %}
+                <li><button type="button" onclick="myFunction({pokemon})">
+                    {{ pokemon.name }} {{ pokemon.number }}
+                </button></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+    <script type="text/javascript", src={{ url_for('static', filename = 'scripts.js') }}></script>
+</body>
+</html>

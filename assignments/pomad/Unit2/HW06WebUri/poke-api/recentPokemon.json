@@ -1,0 +1,12 @@
+{
+    "attack": 80,
+    "defense": 90,
+    "hp": 30,
+    "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/140.svg",
+    "name": "KABUTO",
+    "number": "140",
+    "special_attack": 55,
+    "special_defense": 45,
+    "speed": 55,
+    "weight": 115
+}

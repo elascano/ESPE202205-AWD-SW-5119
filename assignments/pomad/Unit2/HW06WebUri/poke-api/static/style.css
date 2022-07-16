@@ -1,0 +1,45 @@
+  
+  /* If you want the content centered horizontally and vertically */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.list-items{
+    position: relative;
+    margin-top: 50em;
+}
+  
+  /* Style the image inside the centered container, if needed */
+.centered img {
+    width: 150px;
+}
+
+ul {
+    width: 100%;
+    display: flow-root;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+li {
+    margin: 10px;
+}
+
+.card-image{
+    width: 150px;
+    height: 150px;
+}
+
+.items-card{
+    display: flex;
+}
+
+.sub-items{
+    margin: 0 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+}
