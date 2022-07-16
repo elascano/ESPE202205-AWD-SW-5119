@@ -1,0 +1,2 @@
+class SubjectJson < ApplicationRecord
+end
