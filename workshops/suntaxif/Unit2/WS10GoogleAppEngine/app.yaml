@@ -1,0 +1,7 @@
+runtime: nodejs16
+handlers:
+  - url: /
+    static_files: dist/my-first-project/index.html
+    upload: dist/my-first-project/index.html
+  - url: /
+    static_dir: dist/my-first-project
