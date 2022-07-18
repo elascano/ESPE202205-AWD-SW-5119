@@ -1,0 +1,12 @@
+@url = http://localhost:3000
+
+POST{{url}}/addItem
+Content-Type: application/json
+
+{
+    "id": 8,
+    "playlist": 15,
+    "name": "Lana del Reu",
+    "album": "Blue Banisters",
+    "duration": "22:00"
+}
