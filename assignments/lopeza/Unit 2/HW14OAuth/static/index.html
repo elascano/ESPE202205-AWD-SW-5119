@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord OAuth</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="content unauthorized">
+        <div class="top">
+            <img class="img-discord" src="discord.png" width="100px"/>
+            <h1>Happy to see you<br />newcomer 👋</h1>
+        </div>
+        <div class="content-bottom">
+            <a class="btn" href="/auth">SIGN IN WITH DISCORD</a>
+            <p class="sign-in-text">in order to get started</p>
+        </div>
+    </div>
+    <div class="content authorized" style="display: none">
+        <div class="top">
+            <img class="img-discord" src="discord.png" />
+            <h1><span class="party-popper">🎉</span><br />Awesome!<br />You're authorized 🔒</h1>
+        </div>
+    </div>
+</body>
+
+</html>
