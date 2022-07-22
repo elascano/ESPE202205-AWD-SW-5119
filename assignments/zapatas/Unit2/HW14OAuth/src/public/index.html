@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=""/>
+    <title>Form</title>
+</head>
+<body>
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-sm-12 mx-auto col-md-8 col-lg-5">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h1>Contacts</h1>
+                    </div>
+                    <div class="card-body">
+                        <form action="/send-email" method="post">
+                            <div class="form-group">
+                                <input type="text" name = "name" placeholder = "Input name"class="form-control">
+                                <input type="text" name = "email" placeholder = "Input email"class="form-control">
+                                <input type="text" name = "phone" placeholder = "input phone"class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" placeholder="Escriba su correo" rows="6"></textarea>
+                            </div>
+                            <button class="" >
+                                Send
+                            </button>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
