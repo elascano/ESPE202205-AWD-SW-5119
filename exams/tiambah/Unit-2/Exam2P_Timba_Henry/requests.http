@@ -1,0 +1,32 @@
+###
+POST http://localhost:9000/compani/markers HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "idMar":6,
+    "brand":"Colors",
+    "size":98,
+    "amount":18
+} 
+
+###
+GET  http://localhost:9000/compani/markers/all HTTP/1.1
+
+###
+GET  http://localhost:9000/api/users/62bf484e08b4702c990e0181 HTTP/1.1
+
+###
+PUT http://localhost:9000/api/users/62bf484e08b4702c990e0181  HTTP/1.1
+Content-type:application/json
+
+
+{
+
+   "id":8,
+    "name":"banco Paficico",
+    "address":"Guamani",
+    "email":"pcifico@gmail.com"
+}
+###
+DELETE http://localhost:9000/api/users/62bf44010583311621cb4038 HTTP/1.1

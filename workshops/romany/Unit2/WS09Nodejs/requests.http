@@ -1,0 +1,16 @@
+###
+POST http://localhost:3000/api/building HTTP/1.1
+Content-Type: application/json
+
+{
+        "id":4,
+        "owner": "YULLIANA ROMAN",
+        "address": "5 esquinas ",
+        "price": 12000        
+}
+
+###
+GET  http://localhost:3000/api/buildings HTTP/1.1
+
+###
+GET  http://localhost:3000/api/building/62bf48eca5e82999c7b148d2 HTTP/1.1
