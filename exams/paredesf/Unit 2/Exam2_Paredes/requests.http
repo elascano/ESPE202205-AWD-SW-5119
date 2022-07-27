@@ -1,0 +1,13 @@
+###
+POST http://localhost:3005/keyboards/add HTTP/1.1
+Content-Type: application/json
+
+ {
+
+  "id":1,
+  "brand": "Logitech",
+  "color": "Black",
+  "prices": 30
+}
+###
+GET http://localhost:3005/keyboards/all HTTP/1.1
