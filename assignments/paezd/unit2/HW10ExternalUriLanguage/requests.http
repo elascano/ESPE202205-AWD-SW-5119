@@ -3,7 +3,7 @@ POST http://localhost:9000/api/actors HTTP/1.1
 Content-Type: application/json
 
  {
-      "name": "Dwayne Johnson",
+      "name": "Dwayne ",
       "image_path": "/akweMz59qsSoPUJYe7QpjAc2rQp.jpg",
       "alternative_name": "The Rock",
       "objectID": "551486400"

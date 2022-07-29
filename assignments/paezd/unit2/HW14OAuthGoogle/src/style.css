@@ -11,7 +11,7 @@ img{
 .btn{
     text-decoration:none;
     color: black;
-    background-color: greenyellow;
+    background-color: rgb(76, 224, 244);
     width: 200px;
     font-size: 20px;
     border-radius: 20%;
@@ -19,5 +19,5 @@ img{
 
 body{
     padding: 1%;
-    background-color:aquamarine;
+    background-color:rgb(51, 189, 253);
 }
